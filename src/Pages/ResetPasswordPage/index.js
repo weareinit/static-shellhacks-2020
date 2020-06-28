@@ -16,6 +16,10 @@ const ResetPasswordPage = ({ store }) => {
     const message = await store.resetPasswordRequest(data.email)
     alert(message)
   }
+  const handleReturn = e => {
+    e.preventDefault()
+    history.push('/')
+  }
   return (
     <div className="ResetPasswordPage">
       <div className="ResetPasswordPage__form-container">
@@ -36,6 +40,7 @@ const ResetPasswordPage = ({ store }) => {
           {...{
             handleCreateAccount,
             handleSubmit,
+            handleReturn,
             loading: store.loading,
             error: store.error
           }}

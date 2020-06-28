@@ -21,7 +21,7 @@ const HomePage = ({ store }) => {
 }
 
 const HomePageWrapper = ({ store }) => {
-  const [isOpen, setisOpen] = useState(false)
+  const [isOpen, setisOpen] = useState(true)
   useEffect(() => {
     if (!store.user) {
       store.getUser()

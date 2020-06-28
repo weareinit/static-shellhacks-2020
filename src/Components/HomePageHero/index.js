@@ -9,6 +9,9 @@ import ShellHacksLogo from '../../assets/branding/ShellHacks-title.svg'
 import futuristicBuilding from '../../assets/branding/smart-city.svg'
 
 const HomePageHero = props => {
+  const logout = () => {
+    console.log(props)
+  }
   return (
     <div className="HomePageHero">
       <div className="HomePageHero__header">
@@ -43,9 +46,16 @@ const HomePageHero = props => {
                 >
                   Sponsor
                 </a>
-                <a className="old-site-btn" href="/login" rel="_blank">
+                
+                {props.user ? (
+                <button role="button" className="old-site-btn" onClick={logout}>
+                  Logout
+                </button>
+              ) : (
+                <a href="/login" role="button" className="old-site-btn">
                   Login
                 </a>
+              )}
               </div>
               <div className="social-media-container">
                 <a href="http://discord.gg/upefiu" rel="_blank">

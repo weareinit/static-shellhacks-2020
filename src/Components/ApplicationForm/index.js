@@ -21,8 +21,22 @@ const SignUpForm = props => {
           className: 'input'
         },
         {
+          name: 'shirt',
+          label: 'T-Shirt Size * (Unisex sizes)',
+          placeholder: 'Select one',
+          type: 'dropdown',
+          id: 'shirt',
+          className: 'dropdown',
+          choices: [
+            { value: 'Small', label: 'Small' },
+            { value: 'Medium', label: 'Medium' },
+            { value: 'Large', label: 'Large' },
+            { value: 'XLarge', label: 'X-Large' }
+          ]
+        },
+        {
           name: 'address',
-          label: 'Address (Your address will only be used to ship any swag/prizes we may have)',
+          label: 'Address (Your address will only be used to potentially ship any swag/prizes)',
           placeholder: 'Street ',
           type: 'text',
           id: 'street',
@@ -237,12 +251,15 @@ const SignUpForm = props => {
           className: 'dropdown',
           choices: [
             { value: 'Artist', label: 'Artist' },
-            { value: 'Back-end Developer', label: 'Back-end Developer' },
+            { value: 'Back-End Developer', label: 'Back-end Developer' },
             { value: 'Data Scientist', label: 'Data Scientist' },
             { value: 'Entrepreneur', label: 'Entrepreneur' },
-            { value: 'Front-end Developer', label: 'Front-end Developer' },
-            { value: 'Full-stack Developer', label: 'Full-stack Developer' },
+            { value: 'Front-End Developer', label: 'Front-end Developer' },
+            { value: 'Full-Stack Developer', label: 'Full-stack Developer' },
             { value: 'Game Developer', label: 'Game Developer' },
+            { value: 'Software Engineer', label: 'Software Engineer' },
+            { value: 'Computer Engineer', label: 'Computer Engineer' },
+            { value: 'IT Specialist', label: 'IT Specialist' },
             { value: 'Musician', label: 'Musician' },
             { value: 'Mobile Developer', label: 'Mobile Developer' },
             { value: 'UI/UX Designer', label: 'UI/UX Designer' },
@@ -253,7 +270,7 @@ const SignUpForm = props => {
         {
           name: 'linkedIn',
           label: 'LinkedIn',
-          placeholder: 'https://www.linkedin.com/cool-guy',
+          placeholder: 'https://www.linkedin.com/roary',
           type: 'text',
           id: 'linkedIn',
           className: 'input'
@@ -261,7 +278,7 @@ const SignUpForm = props => {
         {
           name: 'github',
           label: 'GitHub',
-          placeholder: 'https://www.github.com/cool-guy',
+          placeholder: 'https://www.github.com/roary',
           type: 'text',
           id: 'github',
           className: 'input'
@@ -269,7 +286,7 @@ const SignUpForm = props => {
         {
           name: 'website',
           label: 'Website',
-          placeholder: 'https://www.coolguy.com',
+          placeholder: 'https://www.shellhacks.net',
           type: 'text',
           id: 'website',
           className: 'input'
@@ -360,7 +377,7 @@ const SignUpForm = props => {
     city: string(),
     state: string(),
     zip: string(),
-    country: string(),
+    shirt: string().required(),
     gender: string().required(),
     ethnicity: string().required(),
     race: string().required(),
@@ -390,12 +407,12 @@ const SignUpForm = props => {
 
   const fieldValidation = {
     dob: async d => await validateHelper(d, 'dob'),
+    shirt: async s => await validateHelper(s, 'shirt'),
     address: async s => await validateHelper(s, 'address'),
     address2: async s => await validateHelper(s, 'address2'),
     city: async s => await validateHelper(s, 'city'),
     state: async s => await validateHelper(s, 'state'),
     zip: async s => await validateHelper(s, 'zip'),
-    country: async s => await validateHelper(s, 'country'),
     gender: async s => await validateHelper(s, 'gender'),
     ethnicity: async s => await validateHelper(s, 'ethnicity'),
     race: async s => await validateHelper(s, 'race'),
@@ -415,12 +432,12 @@ const SignUpForm = props => {
 
   const initialValues = {
     dob: '',
+    shirt: '',
     address: '',
     address2: '',
     city: '',
     state: '',
     zip: '',
-    country: '',
     gender: '',
     ethnicity: '',
     race: '',
@@ -430,7 +447,7 @@ const SignUpForm = props => {
     levelOfStudy: '',
     graduationYear: '',
     role: '',
-    linkedin: '',
+    linkedIn: '',
     github: '',
     website: '',
     attendedShellHacks: '',
