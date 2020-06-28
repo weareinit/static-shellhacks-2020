@@ -29,7 +29,7 @@ export const validPassword = (
     .string()
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
-      'Password must have atleast one uppercase letter, lowercase letter, one number and one special character'
+      'Password must have at least one uppercase letter, lowercase letter, one number and one special character'
     )
     .min(8, min)
     .max(20, max)

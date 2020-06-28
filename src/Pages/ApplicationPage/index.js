@@ -59,9 +59,9 @@ const ApplicationPage = ({ store }) => {
     return (
       <div className="Verification">
         <div className="Verification__body">
-          <h1>Please Verify your email before filing out the application</h1>
+          <h1>Please verify your email before filling out the application</h1>
           <p>
-            Check your inbox for a verification email from ShellHacks.if you have not received an
+            Check your inbox and junk mail for a verification email from ShellHacks. If you have not received an
             email, you can click the button to resend the email.
           </p>
           <button onClick={resendVerificationEmail}>Resend Verification</button>
@@ -88,7 +88,7 @@ const ApplicationPage = ({ store }) => {
         <div className="ApplicationPage__header">
           <p className="ApplicationPage__title">Application</p>
           <p className="ApplicationPage__sub-title">
-            Please fill out this application to get into ShellHacks
+            Please fill out the application below (* are mandatory fields)
           </p>
         </div>
         <ApplicationForm

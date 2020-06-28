@@ -58,6 +58,9 @@ const LoginForm = props => {
       <button className="LoginForm__create-account-btn" onClick={props.handleCreateAccount}>
         Create Account
       </button>
+      <button onClick={props.handleReturn} className="SignUpForm__return-btn">
+        Home
+      </button>
       <button className="LoginForm__forgot-password-btn" onClick={props.handleForgotPassword}>
         Forgot Password?
       </button>
