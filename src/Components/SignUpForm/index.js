@@ -54,7 +54,7 @@ const SignUpForm = props => {
   const validate = values => {
     const errors = {}
     if (values.password !== values.confirmPassword) {
-      errors.confirmPassword = 'passwords must match'
+      errors.confirmPassword = 'Passwords must match'
     }
     return errors
   }

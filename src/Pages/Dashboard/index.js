@@ -19,9 +19,30 @@ const DashBoard = ({ store }) => {
             <div className="DashboardPage__schedule">
               <div className="DashboardPage__schedule-header">
                 <h3>Announcements</h3>
+                <center>Check back often to get the latest updates</center>
+              </div>
+
+              <br />
+              <div className="DashboardPage__schedule-header">
+                <center><h3>We are now accepting applications!</h3></center>
+                <div align ="left"> 
+                <p>1. An email has been sent to you to verify your email, once verified you can apply to ShellHacks!</p>
+                <p>2. Fill out the application</p>
+                <p>3. Once your application is completed and you submit your status will become 'Applied'</p>
+                <br/>
+                <h2>Whats left?</h2>
+                <p>Join us on discord and follow us on social media!</p>
+                </div>
               </div>
               <br />
-              <p>No announments just yet, check back often to get the latest updates.</p>
+              <div className="DashboardPage__schedule-header">
+                <center><h3>You have a chance to win AirPods and more!</h3></center> 
+                <div align ="left">
+                  <p>During our application process we will be giving away prizes! Currently we are giving away a 
+                  pair of AirPods to one of our first 100 applicants!</p>
+                </div>
+              </div>             
+
             </div>
           </div>
         </div>

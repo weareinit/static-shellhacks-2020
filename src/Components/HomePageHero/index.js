@@ -43,8 +43,8 @@ const HomePageHero = props => {
                 >
                   Sponsor
                 </a>
-                <a className="old-site-btn" href="https://shellhacks2019.netlify.com/" rel="_blank">
-                  2019 Site
+                <a className="old-site-btn" href="/login" rel="_blank">
+                  Login
                 </a>
               </div>
               <div className="social-media-container">

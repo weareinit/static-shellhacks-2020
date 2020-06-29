@@ -7,13 +7,14 @@ import majors from '../../config/majors.json'
 import './styles.sass'
 
 const SignUpForm = props => {
+  
   const sections = [
     {
       title: 'Personal Information',
       inputs: [
         {
           name: 'dob',
-          label: 'Date of Birth',
+          label: 'Date of Birth *',
           placeholder: '09/20/1999',
           type: 'text',
           id: 'dob',
@@ -21,7 +22,7 @@ const SignUpForm = props => {
         },
         {
           name: 'address',
-          label: 'Address',
+          label: 'Address (Your address will only be used to ship any swag/prizes we may have)',
           placeholder: 'Street ',
           type: 'text',
           id: 'street',
@@ -29,7 +30,7 @@ const SignUpForm = props => {
         },
         {
           name: 'address2',
-          label: 'Address 2 (optional)',
+          label: 'Address 2',
           placeholder: 'Apt ',
           type: 'text',
           id: 'apt',
@@ -46,30 +47,74 @@ const SignUpForm = props => {
         {
           name: 'state',
           label: 'State',
-          placeholder: 'FL ',
-          type: 'text',
-          id: 'state',
-          className: 'input'
+          placeholder: 'Select one',
+          type: 'dropdown',
+          id: 'text',
+          className: 'dropdown',
+          choices: [
+            { value: 'Alabama' , label: 'Alabama'},
+            { value: 'Alaska' , label: 'Alaska'}, 
+            { value: 'Arizona' , label: 'Arizona'}, 
+            { value: 'Arkansas' , label: 'Arkansas'}, 
+            { value: 'California' , label: 'California'}, 
+            { value: 'Colorado' , label: 'Colorado'}, 
+            { value: 'Connecticut' , label: 'Connecticut'}, 
+            { value: 'Delaware' , label: 'Delaware'}, 
+            { value: 'Florida' , label: 'Florida'}, 
+            { value: 'Georgia' , label: 'Georgia'}, 
+            { value: 'Hawaii' , label: 'Hawaii'}, 
+            { value: 'Idaho' , label: 'Idaho'}, 
+            { value: 'Illinois' , label: 'Illinois'},
+            { value: 'Indiana' , label: 'Indiana'}, 
+            { value: 'Iowa' , label: 'Iowa'}, 
+            { value: 'Kansas' , label: 'Kansas'}, 
+            { value: 'Kentucky' , label: 'Kentucky'}, 
+            { value: 'Louisiana' , label: 'Louisiana'}, 
+            { value: 'Maine' , label: 'Maine'}, 
+            { value: 'Maryland' , label: 'Maryland'}, 
+            { value: 'Massachusetts' , label: 'Massachusetts'}, 
+            { value: 'Michigan' , label: 'Michigan'}, 
+            { value: 'Minnesota' , label: 'Minnesota'}, 
+            { value: 'Mississippi' , label: 'Mississippi'}, 
+            { value: 'Missouri' , label: 'Missouri'}, 
+            { value: 'Montana' , label: 'Montana'},
+            { value: 'Nebraska' , label: 'Nebraska'}, 
+            { value: 'Nevada' , label: 'Nevada'}, 
+            { value: 'New Hampshire' , label: 'New Hampshire'}, 
+            { value: 'New Jersey' , label: 'New Jersey'}, 
+            { value: 'New Mexico' , label: 'New Mexico'}, 
+            { value: 'New York' , label: 'New York'}, 
+            { value: 'North Carolina' , label: 'North Carolina'}, 
+            { value: 'North Dakota' , label: 'North Dakota'}, 
+            { value: 'Ohio' , label: 'Ohio'}, 
+            { value: 'Oklahoma' , label: 'Oklahoma'}, 
+            { value: 'Oregon' , label: 'Oregon'}, 
+            { value: 'Pennsylvania' , label: 'Pennsylvania'},
+            { value: 'Rhode Island' , label: 'Rhode Island'}, 
+            { value: 'South Carolina' , label: 'South Carolina'}, 
+            { value: 'South Dakota' , label: 'South Dakota'}, 
+            { value: 'Tennessee' , label: 'Tennessee'}, 
+            { value: 'Texas' , label: 'Texas'}, 
+            { value: 'Utah' , label: 'Utah'}, 
+            { value: 'Vermont' , label: 'Vermont'}, 
+            { value: 'Virginia' , label: 'Virginia'}, 
+            { value: 'Washington' , label: 'Washington'}, 
+            { value: 'West Virginia' , label: 'West Virginia'}, 
+            { value: 'Wisconsin' , label: 'Wisconsin'}, 
+            { value: 'Wyoming' , label: 'Wyoming'},
+          ]
         },
         {
           name: 'zip',
           label: 'Zip',
           placeholder: '33189 ',
-          type: 'text',
+          type: 'number',
           id: 'zip',
           className: 'input'
         },
         {
-          name: 'country',
-          label: 'Country',
-          placeholder: 'Country ',
-          type: 'text',
-          id: 'country',
-          className: 'input'
-        },
-        {
           name: 'gender',
-          label: 'Gender',
+          label: 'Gender *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'gender',
@@ -82,22 +127,30 @@ const SignUpForm = props => {
           ]
         },
         {
+          name: 'ethnicity',
+          label: 'Ethnicity *',
+          placeholder: 'Select one',
+          type: 'dropdown',
+          id: 'ethnicity',
+          className: 'dropdown',
+          choices: [
+            { value: 'Hispanic or Latinx', label: 'Hispanic or Latinx'},
+            { value: 'Not Hispanic or Latinx', label: 'Not Hispanic or Latinx' }
+          ]
+        },
+        {
           name: 'race',
-          label: 'Race / Ethnicity',
+          label: 'Race *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'race',
           className: 'dropdown',
           choices: [
-            {
-              value: 'American Indian or Alaska Native',
-              label: 'American Indian or Alaska Native'
-            },
+            { value: 'American Indian or Alaska Native', label: 'American Indian or Alaska Native'},
             { value: 'Asian / Pacific Islander', label: 'Asian / Pacific Islander' },
             { value: 'Black or African American', label: 'Black or African American' },
-            { value: 'Hispanic or Latinx', label: 'Hispanic or Latinx' },
-            { value: 'Native Hawaiian or Pacific Islander', label: 'Asian / Pacific Islander' },
-            { value: 'White / Caucasian', label: 'White / Caucasian' },
+            { value: 'Native Hawaiian / Other Pacific Islander', label: 'Native Hawaiian or Other Pacific Islander' },
+            { value: 'White', label: 'White' },
             { value: 'Multi Racial', label: 'Multi Racial' },
             { value: 'Other', label: 'Other' },
             { value: 'Prefer not to answer', label: 'Prefer not to answer' }
@@ -105,8 +158,8 @@ const SignUpForm = props => {
         },
         {
           name: 'phoneNumber',
-          label: 'Phone Number',
-          placeholder: '305-867-5309',
+          label: 'Phone Number *',
+          placeholder: '000-000-0000',
           type: 'phone',
           id: 'phoneNumber',
           className: 'input'
@@ -118,7 +171,7 @@ const SignUpForm = props => {
       inputs: [
         {
           name: 'schoolName',
-          label: 'School Name',
+          label: 'School Name *',
           placeholder: 'Select one',
           type: 'searchable-dropdown',
           id: 'schoolName',
@@ -127,7 +180,7 @@ const SignUpForm = props => {
         },
         {
           name: 'major',
-          label: 'Major',
+          label: 'Major *',
           placeholder: 'Select One',
           type: 'dropdown',
           id: 'major',
@@ -136,25 +189,25 @@ const SignUpForm = props => {
         },
         {
           name: 'levelOfStudy',
-          label: 'Class Standing',
+          label: 'Class Standing *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'levelOfStudy',
           className: 'dropdown',
           choices: [
             { value: 'Freshman', label: 'Freshman' },
-            { value: 'Sophmore', label: 'Sophmore' },
+            { value: 'Sophomore', label: 'Sophomore' },
             { value: 'Junior', label: 'Junior' },
             { value: 'Senior', label: 'Senior' },
             { value: 'Masters', label: 'Masters' },
             { value: 'Ph.D', label: 'Ph.D' },
-            { value: 'BootCamp Student', label: 'BootCamp Student' },
+            { value: 'Bootcamp Student', label: 'Bootcamp Student' },
             { value: 'Recent Graduate', label: 'Recent Graduate' }
           ]
         },
         {
           name: 'graduationYear',
-          label: 'Graduation Year',
+          label: 'Graduation Year *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'graduationYear',
@@ -167,7 +220,7 @@ const SignUpForm = props => {
             { value: '2023', label: '2023' },
             { value: '2024', label: '2024' },
             { value: '2025', label: '2025' },
-            { value: '2026', placehlabelolder: '2026' }
+            { value: '2026', label: '2026' }
           ]
         }
       ]
@@ -177,7 +230,7 @@ const SignUpForm = props => {
       inputs: [
         {
           name: 'role',
-          label: 'Which role best describes you?',
+          label: 'Which role best describes you? *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'role',
@@ -228,21 +281,23 @@ const SignUpForm = props => {
       inputs: [
         {
           name: 'attendedShellHacks',
-          label: 'Have you attended Shellhacks before?',
+          label: 'Have you attended ShellHacks before? *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'attendedShellHacks',
           className: 'dropdown',
           choices: [
-            { label: 'Shellacks 2017', value: 'Shellacks 2017' },
-            { label: 'Shellacks 2018', value: 'Shellacks 2018' },
-            { label: 'Shellacks 2019', value: 'Shellacks 2019' },
+            { label: 'ShellHacks 2017', value: 'ShellHacks 2017' },
+            { label: 'ShellHacks 2018', value: 'ShellHacks 2018' },
+            { label: 'ShellHacks 2019', value: 'ShellHacks 2019' },
+            { label: 'I attended two of them!', value: 'Attended two' },
+            { label: 'I attended all of them!', value: 'Attended all' },
             { label: 'This is my first time!', value: 'First Time' }
           ]
         },
         {
           name: 'howDidYouHear',
-          label: 'How did you hear about us?',
+          label: 'How did you hear about us? *',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'howDidYouHear',
@@ -288,7 +343,7 @@ const SignUpForm = props => {
         },
         {
           name: 'resume',
-          label: 'Resume',
+          label: 'Resume * (PDF only)',
           placeholder: '',
           type: 'file',
           id: 'resume',
@@ -300,13 +355,14 @@ const SignUpForm = props => {
 
   const schema = object().shape({
     dob: validDate().required(),
-    address: string().required(),
+    address: string(),
     address2: string(),
-    city: string().required(),
-    state: string().required(),
-    zip: string().required(),
-    country: string().required(),
+    city: string(),
+    state: string(),
+    zip: string(),
+    country: string(),
     gender: string().required(),
+    ethnicity: string().required(),
     race: string().required(),
     phoneNumber: validPhoneNumber(),
     schoolName: string().required(),
@@ -341,6 +397,7 @@ const SignUpForm = props => {
     zip: async s => await validateHelper(s, 'zip'),
     country: async s => await validateHelper(s, 'country'),
     gender: async s => await validateHelper(s, 'gender'),
+    ethnicity: async s => await validateHelper(s, 'ethnicity'),
     race: async s => await validateHelper(s, 'race'),
     phoneNumber: async s => await validateHelper(s, 'phoneNumber'),
     schoolName: async s => await validateHelper(s, 'schoolName'),
@@ -365,6 +422,7 @@ const SignUpForm = props => {
     zip: '',
     country: '',
     gender: '',
+    ethnicity: '',
     race: '',
     phoneNumber: '',
     schoolName: '',
