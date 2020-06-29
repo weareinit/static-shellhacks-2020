@@ -70,6 +70,11 @@ const Form = ({
                 {Component && <Component />}
               </div>
             </FormikForm>
+            {Object.keys(formik.errors).length > 0 && (
+              <div className={classes('status')}>
+                <div>There are one or more errors, please verify all fields are correct</div>
+              </div>
+            )}
           </>
         )}
       </Formik>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { object, reach, string as yupString } from 'yup'
-import { validEmail, validString, validPassword } from '../Util/validation'
+import { validEmail, validString, validPassword, validLastName } from '../Util/validation'
 import Form from '../Common/Form'
 import ReCAPTCHA from '../../Components/ReCaptcha'
 import './styles.sass'
@@ -62,7 +62,7 @@ const SignUpForm = props => {
   const schema = object().shape({
     email: validEmail(),
     firstName: validString(),
-    lastName: validString(),
+    lastName: validLastName(),
     password: validPassword(),
     captcha: yupString().required('Captcha validation is required')
   })
@@ -106,7 +106,7 @@ const SignUpForm = props => {
       <button onClick={props.handleReturn} className="SignUpForm__return-btn">
         Back
       </button>
-     
+
       <a className="SignUpForm__login-btn" href="/login">
         Already have an account? Click here to sign in
       </a>

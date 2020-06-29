@@ -61,8 +61,8 @@ const ApplicationPage = ({ store }) => {
         <div className="Verification__body">
           <h1>Please verify your email before filling out the application</h1>
           <p>
-            Check your inbox and junk mail for a verification email from ShellHacks. If you have not received an
-            email, you can click the button to resend the email.
+            Check your inbox and junk mail for a verification email from ShellHacks. If you have not
+            received an email, you can click the button to resend the email.
           </p>
           <button onClick={resendVerificationEmail}>Resend Verification</button>
           <br />

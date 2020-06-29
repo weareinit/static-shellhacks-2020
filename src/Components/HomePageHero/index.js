@@ -10,7 +10,8 @@ import futuristicBuilding from '../../assets/branding/smart-city.svg'
 
 const HomePageHero = props => {
   const logout = () => {
-    console.log(props)
+    props.logout()
+    window.location.reload()
   }
   return (
     <div className="HomePageHero">
@@ -46,16 +47,16 @@ const HomePageHero = props => {
                 >
                   Sponsor
                 </a>
-                
+
                 {props.user ? (
-                <button role="button" className="old-site-btn" onClick={logout}>
-                  Logout
-                </button>
-              ) : (
-                <a href="/login" role="button" className="old-site-btn">
-                  Login
-                </a>
-              )}
+                  <button role="button" className="old-site-btn" onClick={logout}>
+                    Logout
+                  </button>
+                ) : (
+                  <a href="/login" role="button" className="old-site-btn">
+                    Login
+                  </a>
+                )}
               </div>
               <div className="social-media-container">
                 <a href="http://discord.gg/upefiu" rel="_blank">

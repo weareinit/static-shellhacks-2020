@@ -1,13 +1,12 @@
 import React from 'react'
 import { object, reach, string } from 'yup'
-import { validPhoneNumber, validDate, validPDF } from '../Util/validation'
+import { validPhoneNumber, validDate, validPDF, validURL } from '../Util/validation'
 import SectionForm from '../Common/SectionForm'
 import schools from '../../config/schools.json'
 import majors from '../../config/majors.json'
 import './styles.sass'
 
 const SignUpForm = props => {
-  
   const sections = [
     {
       title: 'Personal Information',
@@ -66,56 +65,56 @@ const SignUpForm = props => {
           id: 'text',
           className: 'dropdown',
           choices: [
-            { value: 'Alabama' , label: 'Alabama'},
-            { value: 'Alaska' , label: 'Alaska'}, 
-            { value: 'Arizona' , label: 'Arizona'}, 
-            { value: 'Arkansas' , label: 'Arkansas'}, 
-            { value: 'California' , label: 'California'}, 
-            { value: 'Colorado' , label: 'Colorado'}, 
-            { value: 'Connecticut' , label: 'Connecticut'}, 
-            { value: 'Delaware' , label: 'Delaware'}, 
-            { value: 'Florida' , label: 'Florida'}, 
-            { value: 'Georgia' , label: 'Georgia'}, 
-            { value: 'Hawaii' , label: 'Hawaii'}, 
-            { value: 'Idaho' , label: 'Idaho'}, 
-            { value: 'Illinois' , label: 'Illinois'},
-            { value: 'Indiana' , label: 'Indiana'}, 
-            { value: 'Iowa' , label: 'Iowa'}, 
-            { value: 'Kansas' , label: 'Kansas'}, 
-            { value: 'Kentucky' , label: 'Kentucky'}, 
-            { value: 'Louisiana' , label: 'Louisiana'}, 
-            { value: 'Maine' , label: 'Maine'}, 
-            { value: 'Maryland' , label: 'Maryland'}, 
-            { value: 'Massachusetts' , label: 'Massachusetts'}, 
-            { value: 'Michigan' , label: 'Michigan'}, 
-            { value: 'Minnesota' , label: 'Minnesota'}, 
-            { value: 'Mississippi' , label: 'Mississippi'}, 
-            { value: 'Missouri' , label: 'Missouri'}, 
-            { value: 'Montana' , label: 'Montana'},
-            { value: 'Nebraska' , label: 'Nebraska'}, 
-            { value: 'Nevada' , label: 'Nevada'}, 
-            { value: 'New Hampshire' , label: 'New Hampshire'}, 
-            { value: 'New Jersey' , label: 'New Jersey'}, 
-            { value: 'New Mexico' , label: 'New Mexico'}, 
-            { value: 'New York' , label: 'New York'}, 
-            { value: 'North Carolina' , label: 'North Carolina'}, 
-            { value: 'North Dakota' , label: 'North Dakota'}, 
-            { value: 'Ohio' , label: 'Ohio'}, 
-            { value: 'Oklahoma' , label: 'Oklahoma'}, 
-            { value: 'Oregon' , label: 'Oregon'}, 
-            { value: 'Pennsylvania' , label: 'Pennsylvania'},
-            { value: 'Rhode Island' , label: 'Rhode Island'}, 
-            { value: 'South Carolina' , label: 'South Carolina'}, 
-            { value: 'South Dakota' , label: 'South Dakota'}, 
-            { value: 'Tennessee' , label: 'Tennessee'}, 
-            { value: 'Texas' , label: 'Texas'}, 
-            { value: 'Utah' , label: 'Utah'}, 
-            { value: 'Vermont' , label: 'Vermont'}, 
-            { value: 'Virginia' , label: 'Virginia'}, 
-            { value: 'Washington' , label: 'Washington'}, 
-            { value: 'West Virginia' , label: 'West Virginia'}, 
-            { value: 'Wisconsin' , label: 'Wisconsin'}, 
-            { value: 'Wyoming' , label: 'Wyoming'},
+            { value: 'Alabama', label: 'Alabama' },
+            { value: 'Alaska', label: 'Alaska' },
+            { value: 'Arizona', label: 'Arizona' },
+            { value: 'Arkansas', label: 'Arkansas' },
+            { value: 'California', label: 'California' },
+            { value: 'Colorado', label: 'Colorado' },
+            { value: 'Connecticut', label: 'Connecticut' },
+            { value: 'Delaware', label: 'Delaware' },
+            { value: 'Florida', label: 'Florida' },
+            { value: 'Georgia', label: 'Georgia' },
+            { value: 'Hawaii', label: 'Hawaii' },
+            { value: 'Idaho', label: 'Idaho' },
+            { value: 'Illinois', label: 'Illinois' },
+            { value: 'Indiana', label: 'Indiana' },
+            { value: 'Iowa', label: 'Iowa' },
+            { value: 'Kansas', label: 'Kansas' },
+            { value: 'Kentucky', label: 'Kentucky' },
+            { value: 'Louisiana', label: 'Louisiana' },
+            { value: 'Maine', label: 'Maine' },
+            { value: 'Maryland', label: 'Maryland' },
+            { value: 'Massachusetts', label: 'Massachusetts' },
+            { value: 'Michigan', label: 'Michigan' },
+            { value: 'Minnesota', label: 'Minnesota' },
+            { value: 'Mississippi', label: 'Mississippi' },
+            { value: 'Missouri', label: 'Missouri' },
+            { value: 'Montana', label: 'Montana' },
+            { value: 'Nebraska', label: 'Nebraska' },
+            { value: 'Nevada', label: 'Nevada' },
+            { value: 'New Hampshire', label: 'New Hampshire' },
+            { value: 'New Jersey', label: 'New Jersey' },
+            { value: 'New Mexico', label: 'New Mexico' },
+            { value: 'New York', label: 'New York' },
+            { value: 'North Carolina', label: 'North Carolina' },
+            { value: 'North Dakota', label: 'North Dakota' },
+            { value: 'Ohio', label: 'Ohio' },
+            { value: 'Oklahoma', label: 'Oklahoma' },
+            { value: 'Oregon', label: 'Oregon' },
+            { value: 'Pennsylvania', label: 'Pennsylvania' },
+            { value: 'Rhode Island', label: 'Rhode Island' },
+            { value: 'South Carolina', label: 'South Carolina' },
+            { value: 'South Dakota', label: 'South Dakota' },
+            { value: 'Tennessee', label: 'Tennessee' },
+            { value: 'Texas', label: 'Texas' },
+            { value: 'Utah', label: 'Utah' },
+            { value: 'Vermont', label: 'Vermont' },
+            { value: 'Virginia', label: 'Virginia' },
+            { value: 'Washington', label: 'Washington' },
+            { value: 'West Virginia', label: 'West Virginia' },
+            { value: 'Wisconsin', label: 'Wisconsin' },
+            { value: 'Wyoming', label: 'Wyoming' }
           ]
         },
         {
@@ -148,7 +147,7 @@ const SignUpForm = props => {
           id: 'ethnicity',
           className: 'dropdown',
           choices: [
-            { value: 'Hispanic or Latinx', label: 'Hispanic or Latinx'},
+            { value: 'Hispanic or Latinx', label: 'Hispanic or Latinx' },
             { value: 'Not Hispanic or Latinx', label: 'Not Hispanic or Latinx' }
           ]
         },
@@ -160,10 +159,16 @@ const SignUpForm = props => {
           id: 'race',
           className: 'dropdown',
           choices: [
-            { value: 'American Indian or Alaska Native', label: 'American Indian or Alaska Native'},
+            {
+              value: 'American Indian or Alaska Native',
+              label: 'American Indian or Alaska Native'
+            },
             { value: 'Asian / Pacific Islander', label: 'Asian / Pacific Islander' },
             { value: 'Black or African American', label: 'Black or African American' },
-            { value: 'Native Hawaiian / Other Pacific Islander', label: 'Native Hawaiian or Other Pacific Islander' },
+            {
+              value: 'Native Hawaiian / Other Pacific Islander',
+              label: 'Native Hawaiian or Other Pacific Islander'
+            },
             { value: 'White', label: 'White' },
             { value: 'Multi Racial', label: 'Multi Racial' },
             { value: 'Other', label: 'Other' },
@@ -387,15 +392,13 @@ const SignUpForm = props => {
     levelOfStudy: string().required(),
     graduationYear: string().required(),
     role: string().required(),
-    linkedIn: string(),
-    github: string(),
-    website: string(),
+    linkedIn: validURL(),
+    github: validURL(),
+    website: validURL(),
     attendedShellHacks: string().required(),
     howDidYouHear: string().required(),
     resume: validPDF().required()
   })
-
-  const validation = values => {}
 
   const validateHelper = async (value, path) =>
     reach(schema, path)
@@ -429,6 +432,8 @@ const SignUpForm = props => {
     howDidYouHear: async s => await validateHelper(s, 'howDidYouHear'),
     resume: async s => await validateHelper(s, 'resume')
   }
+
+  const validation = () => ({})
 
   const initialValues = {
     dob: '',

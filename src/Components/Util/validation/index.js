@@ -28,7 +28,7 @@ export const validPassword = (
   return yup
     .string()
     .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&-]{8,25}$/,
       'Password must have at least one uppercase letter, lowercase letter, one number and one special character'
     )
     .min(8, min)
@@ -38,29 +38,25 @@ export const validPassword = (
 export const validPhoneNumber = (
   message = 'Phone number must be one of the following format XXX-XXX-XXXX'
 ) => {
-  return yup.string().matches(/^\d{3}-\d{3}-\d{4}$/, message)
+  return yup.string().matches(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, message)
 }
 
 const getValidDobRange = () => {
   let eventDate = moment(new Date(2020, 9, 11), 'YYYYMMDD')
-  const max = moment(eventDate)
-    .subtract(18, 'years') // 18yrs from shellhacks
-    .format('YYYY-MM-DD')
+  const max = moment(eventDate).subtract(18, 'years')
   return max
 }
 
 export const validDate = (
-  max = 'Date must be in the following format DD/MM/YYYY & Must be at least 18 years old',
-  required = 'Date is required'
+  max = 'Must be at least 18 years old',
+  required = 'Date is required',
+  format = 'Date must be in the following format DD/MM/YYYY'
 ) => {
   return yup
-    .date()
-    .transform((_, org) => {
-      const valid = RegExp(/^[\d]{2}\/[\d]{2}\/[\d]{4}$/).test(org)
-      return valid ? _ : new Date()
-    })
-    .max(new Date(getValidDobRange()), max)
-    .required(required)
+    .mixed()
+    .test('required', required, value => value.length > 0)
+    .test('format', format, value => RegExp(/^[\d]{2}\/[\d]{2}\/[\d]{4}$/).test(value))
+    .test('max', max, value => getValidDobRange().isSameOrAfter(value))
 }
 
 export const validPDF = () => {
@@ -70,4 +66,24 @@ export const validPDF = () => {
     .mixed()
     .test('fileSize', 'File Size is too large', value => value.size > FILE_SIZE)
     .test('fileType', 'Unsupported File Format', value => SUPPORTED_FORMATS.includes(value.type))
+}
+
+export const validURL = () => {
+  return yup.mixed().test('url,', 'please enter a valid url', value => {
+    if (!value) {
+      return true
+    }
+    return RegExp(
+      /^((http|https):\/\/){0,1}(www.){0,1}[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[-a-zA-Z0-9@:%._\+~#=\/]{1,256}$/
+    ).test(value)
+  })
+}
+
+export const validLastName = () => {
+  return yup
+    .string()
+    .matches(
+      /^\w{2,20}((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?$/,
+      'must only contain letters spaces and hyphens'
+    )
 }

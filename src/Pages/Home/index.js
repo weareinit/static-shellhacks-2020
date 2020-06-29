@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import HomePageHero from '../../Components/HomePageHero'
 import About from '../../Components/About'
+import HostSection from '../../Components/HostSection'
 import TrackSection from '../../Components/TrackSection'
 import FAQSection from '../../Components/FAQSection/FAQSection'
+import Sponsors from '../../Components/Sponsors'
 import AuthStore from '../../store/AuthStore'
 import { AuthStoreConsumer } from '../../store/AuthStore/Context'
 import LoadingPage from '../Loading'
@@ -12,10 +14,12 @@ import './styles.sass'
 const HomePage = ({ store }) => {
   return (
     <div className={!!store.user ? '' : 'HomePage'}>
-      <HomePageHero user={!!store.user} />
+      <HomePageHero user={!!store.user} logout={store.logout} />
       <About />
-      <TrackSection />
-      <FAQSection />
+      {/* <TrackSection />
+      <FAQSection /> */}
+      <HostSection />
+      <Sponsors />
     </div>
   )
 }
