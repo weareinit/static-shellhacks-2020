@@ -18,6 +18,10 @@ const LoginPage = ({ store }) => {
     const success = await store.login(data)
     if (success) history.push('/dashboard')
   }
+  const handleReturn = e => {
+    e.preventDefault()
+    history.push('/')
+  }
   return (
     <div className="LoginPage">
       <div className="LoginPage__form-container">
@@ -41,6 +45,7 @@ const LoginPage = ({ store }) => {
             handleCreateAccount,
             handleForgotPassword,
             handleSubmit,
+            handleReturn,
             loading: store.loading,
             error: store.error
           }}

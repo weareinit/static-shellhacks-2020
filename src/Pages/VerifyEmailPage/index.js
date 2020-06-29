@@ -40,8 +40,8 @@ const VerifyEmailPage = ({ store }) => {
         <h1>{message}</h1>
         {error && <button onClick={resendVerificationEmail}>Resend verification link</button>}
         {!error && (
-          <a href="/">
-            <button>Home</button>
+          <a href="/dashboard">
+            <button>Dashboard</button>
           </a>
         )}
       </div>
