@@ -16,8 +16,8 @@ const HomePage = ({ store }) => {
     <div className={!!store.user ? '' : 'HomePage'}>
       <HomePageHero user={!!store.user} logout={store.logout} />
       <About />
-      {/* <TrackSection />
-      <FAQSection /> */}
+      <TrackSection /> 
+      <FAQSection /> 
       <HostSection />
       <Sponsors />
     </div>

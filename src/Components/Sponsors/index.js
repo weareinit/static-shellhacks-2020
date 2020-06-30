@@ -13,24 +13,26 @@ import Twilio from '../../assets/Sponsors/Logo__Twilio.svg'
 import Twitter from '../../assets/Sponsors/Logo__Twitter.svg'
 import Wolfram from '../../assets/Sponsors/Logo__WolframAlpha.svg'
 import XBOX from '../../assets/Sponsors/Logo__XBOX.svg'
+import Rocket from '../../assets/Sponsors/Rocket.svg'
 
 const sponsors = [
-  FifteenSeventeen,
-  Assurant,
-  Balsamiq,
-  FloridaPanthers,
-  GCP,
   Google,
-  Heroku,
-  Linode,
-  StateFarm,
-  Twilio,
   Twitter,
+  StateFarm,
+  Assurant,
+  XBOX,
+  Balsamiq,
+  Linode,
+  GCP,
+  FloridaPanthers,
+  Heroku,
+  Twilio,
   Wolfram,
-  XBOX
 ]
 
 const Sponsors = () => {
+
+
   return (
     <div className="Sponsors">
       <div className="Sponsors__content">
@@ -40,6 +42,11 @@ const Sponsors = () => {
             return <div><img src={s} /></div>
           })}
         </div>
+      </div>
+      <br/>
+      <center><h2 className="Sponsors__title">With 💛 from ShellHacks</h2></center>
+      <div className="Sponsors__rocket">
+        <img src={Rocket} alt="Rocket-building" />
       </div>
     </div>
   )

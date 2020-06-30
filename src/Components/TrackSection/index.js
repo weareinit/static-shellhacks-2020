@@ -5,20 +5,26 @@ import './styles.sass'
 import Track from '../Track'
 
 const TrackSection = props => {
-  const tracks = [1,2,3,4,5,6]
+  const tracks = [
+                    {title: "Web Development", body: "ShellHacks is taking place from September 25th through the 27th virtually"},
+                    {title: "Mobile Development", body: "ShellHacks is taking place from September 25th through the 27th virtually"},
+                    {title: "Artificial Intelligence", body: "ShellHacks is taking place from September 25th through the 27th virtually"},
+                    {title: "Game Development", body: "ShellHacks is taking place from September 25th through the 27th virtually"},
+                    {title: "Information Technology", body: "ShellHacks is taking place from September 25th through the 27th virtually"},
+                    {title: "Hardware", body: "ShellHacks is taking place from September 25th through the 27th virtually"}
+                  ]
   return (
     <div className="TrackSection">
-      <h2 className="TrackSection__title">What's there?</h2>
+      <h2 className="TrackSection__title">Learning Simulations</h2>
       <div className="TrackSection__container">
-      {tracks && tracks.map(track => 
-          <Track 
-          key={track.toString()}
-          title="Front-End Development" 
-          body="Short description of Front-end dev, including what it is, where is it used for and what are some cool examples of said development. Something to get people interested!"/>)}
-      </div>
-
-      
-    </div>
+      {tracks && 
+        tracks.map((track,index) =>{
+          track = tracks[index]
+          return <Track title={track.title} body={track.body} />
+        })}
+        
+</div>
+</div>
   )
 }
 
