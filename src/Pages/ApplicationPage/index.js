@@ -33,11 +33,9 @@ const ApplicationPage = ({ store }) => {
     delete app.__v
     app.howDidYouHearAboutShellhacks = app.howDidYouHear
     delete app.howDidYouHear
-    app.needTravelReinbursement = app.travelReinbursement ? 'yes' : 'no'
-    delete app.travelReinbursement
     app.dateOfBirth = app.dob
     delete app.dob
-    app.attendedShellhacksBefore = app.attendedShellHacks ? 'yes' : 'no'
+    app.attendedShellhacksBefore = app.attendedShellHacks
     delete app.attendedShellHacks
     return (
       <div className="ApplicationPreview">
@@ -75,7 +73,7 @@ const ApplicationPage = ({ store }) => {
       <div className="Verification">
         <div className="Verification__body">
           <h1>It seems that you've already filled out an application for Shellhacks</h1>
-          <p>here is an overview of the submitted application</p>
+          <p>Here is an overview of the submitted application</p>
           <br />
           {formatApplication(store.application)}
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles.sass"
-import Logo from '../../assets/branding/UPE_logo.png'
+import Logo from '../../assets/branding/UPE_logo.svg'
 
 
 const HostSection = props => {
