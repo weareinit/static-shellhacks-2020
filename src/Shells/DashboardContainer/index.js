@@ -39,31 +39,31 @@ class DashboardContainer extends Component {
                 <li className={this.menuItemClasses('application')}>Application</li>
               </a>
               <a href="/">
-              <li className={this.menuItemClasses('logout')} onClick={this.logout}>Logout</li>
+                <li className={this.menuItemClasses('logout')} onClick={this.logout}>
+                  Logout
+                </li>
               </a>
               {/* <a href="/profile">
                 <li className={this.menuItemClasses('profile')}>Profile</li>
               </a> */}
             </ul>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/>
-            <center><div className="social-media-container">
-                <a href="http://discord.gg/upefiu" rel="_blank">
-                  <img src={discordLogo} alt="discord-logo" />
-                </a>
-                <a href="https://www.facebook.com/upefiu/" rel="_blank">
-                  <img src={faceBookLogo} alt="facebook-logo" />
-                </a>
-                <a href="https://www.instagram.com/upefiu/" rel="_blank">
-                  <img src={instagramLogo} alt="instagram-logo" />
-                </a>
-                <a href="https://twitter.com/upefiu" rel="_blank">
-                  <img src={twitterLogo} alt="twitter-logo" />
-                </a>
-                <a href="https://www.linkedin.com/company/28673457" rel="_blank">
-                  <img src={linkedinLogo} alt="linkedin-logo" />
-                </a>
-              </div></center>
+            <div className="DashboardContainer__social-media-container">
+              <a href="http://discord.gg/upefiu" rel="_blank">
+                <img src={discordLogo} alt="discord-logo" />
+              </a>
+              <a href="https://www.facebook.com/upefiu/" rel="_blank">
+                <img src={faceBookLogo} alt="facebook-logo" />
+              </a>
+              <a href="https://www.instagram.com/upefiu/" rel="_blank">
+                <img src={instagramLogo} alt="instagram-logo" />
+              </a>
+              <a href="https://twitter.com/upefiu" rel="_blank">
+                <img src={twitterLogo} alt="twitter-logo" />
+              </a>
+              <a href="https://www.linkedin.com/company/28673457" rel="_blank">
+                <img src={linkedinLogo} alt="linkedin-logo" />
+              </a>
+            </div>
             <div className="DashboardContainer__close-menu-btn">
               <button onClick={() => this.props.setIsOpen(false)}>x</button>
             </div>

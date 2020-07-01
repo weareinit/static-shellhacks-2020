@@ -39,9 +39,17 @@
     width: 100%
     border: none
     background: linear-gradient(80deg,#0ad2df,#f605fe)
-  &__footer
-    display: flex
-    justify-content: space-between
+  &__footer-
+    padding-top: 10px
+    button
+      margin-bottom: 10px
+      width: 100%
+    @media( min-width: 700px)
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      button
+        width: 45%
     width: 100%
     padding-top: 20px
   &__create-account-btn
