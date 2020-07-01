@@ -28,7 +28,7 @@ export const validPassword = (
   return yup
     .string()
     .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&-]{8,25}$/,
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&-]{8,25}$/,
       'Password must have at least one uppercase letter, lowercase letter, one number and one special character'
     )
     .min(8, min)

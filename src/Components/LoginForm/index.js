@@ -54,7 +54,7 @@ const LoginForm = props => {
   }
 
   const Footer = () => (
-    <div className="LoginForm__footer">
+    <div className="LoginForm__footer-">
       <button className="LoginForm__create-account-btn" onClick={props.handleCreateAccount}>
         Create Account
       </button>

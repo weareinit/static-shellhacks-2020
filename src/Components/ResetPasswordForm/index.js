@@ -44,7 +44,7 @@ const ResetPasswordEmail = props => {
   }
 
   const Footer = () => (
-    <div className="LoginForm__footer">
+    <div className="LoginForm__footer--">
       <button className="LoginForm__create-account-btn" onClick={props.handleCreateAccount}>Back</button>
       <button className="SignUpForm__return-btn" onClick={props.handleReturn} > Home </button>
     </div>

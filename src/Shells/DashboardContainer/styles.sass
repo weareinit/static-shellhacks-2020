@@ -1,6 +1,7 @@
 @import '../../sass/main.sass'
 
 .DashboardContainer
+  overflow: hidden
   display: flex
   height: 100vh
   &__menu-btn
@@ -17,7 +18,9 @@
       border-radius: 2px
       margin-bottom: 6px
   &__menu
-    width: 400px
+    display: flex
+    flex-direction: column
+    width: 200px
     background: $top-to-bottom-blue-pink-gradient
     position: relative
   &__close-menu-btn
@@ -31,6 +34,7 @@
       cursor: pointer
   &__items
     margin-top: 50px
+    height: 80%
     li
       font-weight: 700
       font-size: 25px
@@ -42,7 +46,8 @@
   &__body
     overflow: scroll
     width: 100%
-    padding: 60px
+    padding: 15px
+    padding-top: 60px
     background: $purple-gradient
   &__logout-btn
     position: absolute
@@ -58,3 +63,5 @@
       color: #fff
       font-size: 30px
       cursor: pointer
+  &__social-media-container
+    text-align: center
