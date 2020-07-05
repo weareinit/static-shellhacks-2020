@@ -13,7 +13,7 @@ import Mobile from "../../assets/branding/Mobile_Track_Icon.svg"
 const TrackSection = props => {
   const tracks = [
                     {title: "Web Development", body: "Develop modern and responsive web applications using the latest technologies", image: Web},
-                    {title: "Mobile Development", body: "Build interactive mobile applications for iOS and Android platforms", image: Mobile},
+                    {title: "Mobile Development", body: "Build interactive mobile applications for the iOS and Android platforms", image: Mobile},
                     {title: "Artificial Intelligence", body: "Implement machine learning algorithms to automate tasks and make predictions", image: AI},
                     {title: "Game Development", body: "Create virtual experiences that bring characters and stories to life", image: GameDev},
                     {title: "Information Technology", body: "Dive into cloud computing, ethical hacking, and cybersecurity", image: IT},
