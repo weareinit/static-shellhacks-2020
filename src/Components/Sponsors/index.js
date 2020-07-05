@@ -36,7 +36,7 @@ const Sponsors = () => {
   return (
     <div className="Sponsors">
       <div className="Sponsors__content">
-        <h2 className="Sponsors__title">Sponsors</h2>
+        <h2 className="Sponsors__title">Sponsored By</h2>
         <div className="Sponsors__sponsors">
           {sponsors.map(s => {
             return <div><img src={s} /></div>

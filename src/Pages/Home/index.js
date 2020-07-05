@@ -17,6 +17,7 @@ const HomePage = ({ store }) => {
       <HomePageHero user={!!store.user} logout={store.logout} />
       <About />
       <TrackSection /> 
+      <br/><br/><br/><br/><br/><br/><br/>
       <FAQSection /> 
       <HostSection />
       <Sponsors />
