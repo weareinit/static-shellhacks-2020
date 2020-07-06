@@ -28,11 +28,11 @@ export const validPassword = (
   return yup
     .string()
     .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&-]{8,25}$/,
-      'Password must have at least one uppercase letter, lowercase letter, one number and one special character'
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\#@$!%*?&])[A-Za-z\d@$!%*?&\#-]{8,25}$/,
+      'Password must have at least one uppercase letter, lowercase letter, one number and one special character and must be between 8 and 25 characters'
     )
     .min(8, min)
-    .max(20, max)
+    .max(25, max)
 }
 
 export const validPhoneNumber = (

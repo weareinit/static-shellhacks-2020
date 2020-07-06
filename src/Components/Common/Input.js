@@ -120,7 +120,12 @@ const SelectField = ({ choices, field, form, ...rest }) => {
   )
 }
 
-const SearchableDropDown = props => <Field component={SelectField} {...props} />
+const SearchableDropDown = props => (
+  <>
+    {props.label && <label htmlFor={props.name}>{props.label}</label>}
+    <Field component={SelectField} {...props} />
+  </>
+)
 
 const FileInput = ({ field, form, ...props }) => {
   const TextInputClasses = cx('FileInput', {
