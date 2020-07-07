@@ -1,9 +1,6 @@
 import React from 'react'
 import "./styles.sass"
 import About from '../../assets/branding/About.svg'
-import relaxEmoji from '../../assets/emojis/1f5bc.svg'
-import learnEmoji from '../../assets/emojis/1f4dd.svg'
-//import treatEmoji from '../../assets/emojis/1f379.svg'
 
 
 const AboutSection = props => {
