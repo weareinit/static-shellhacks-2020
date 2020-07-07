@@ -7,7 +7,7 @@ const HostSection = props => {
   return (
     <div className="HostSection">
       <div className="HostSection__imgContainer">
-        <img className="HostSection__img" src={Logo} alt ="About SVG"/>
+        <a href="https://upe.cs.fiu.edu"> <img className="HostSection__img" src={Logo} alt ="About SVG"/></a>
       </div>
       <div className="HostSection__content">
       <h2 className="HostSection__title">Hosted By</h2>

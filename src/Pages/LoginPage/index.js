@@ -37,7 +37,7 @@ const LoginPage = ({ store }) => {
           </a>
           <br></br>
           <br></br>
-          <p className="LoginPage__sub-title">Welcome Back!</p>
+          <p className="LoginPage__sub-title">Welcome back!</p>
           <p className="LoginPage__text"></p>
         </div>
         <LoginForm

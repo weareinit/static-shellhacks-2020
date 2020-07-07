@@ -21,7 +21,7 @@ const TrackSection = props => {
                   ]
   return (
     <div className="TrackSection">
-      <h2 className="TrackSection__title">Learning Simulations</h2>
+      <h2 className="TrackSection__title">Learning Tracks</h2>
       <div className="TrackSection__container">
       {tracks && 
         tracks.map((track,index) =>{

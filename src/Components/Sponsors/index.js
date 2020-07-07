@@ -13,6 +13,9 @@ import Twilio from '../../assets/Sponsors/Logo__Twilio.svg'
 import Twitter from '../../assets/Sponsors/Logo__Twitter.svg'
 import Wolfram from '../../assets/Sponsors/Logo__WolframAlpha.svg'
 import XBOX from '../../assets/Sponsors/Logo__XBOX.svg'
+import JetBrains from '../../assets/Sponsors/Logo__Jetbrains.svg'
+import StickerMule from '../../assets/Sponsors/Logo__Stickermule.svg'
+import MLH from '../../assets/Sponsors/Logo__MLH.svg'
 import Rocket from '../../assets/Sponsors/Rocket.svg'
 
 const sponsors = [
@@ -28,6 +31,8 @@ const sponsors = [
   Heroku,
   Twilio,
   Wolfram,
+  JetBrains,
+  StickerMule,
 ]
 
 const Sponsors = () => {
