@@ -7,6 +7,7 @@ import ApplicationStore from '../../store/ApplicationStore'
 import { ApplicationStoreConsumer } from '../../store/ApplicationStore/Context'
 import AuthPage from '../../Shells/AuthPage'
 import DashboardContainer from '../../Shells/DashboardContainer'
+import Funnel from "../../assets/branding/Funnel.svg"
 
 import './styles.sass'
 
@@ -72,8 +73,8 @@ const ApplicationPage = ({ store }) => {
     return (
       <div className="Verification">
         <div className="Verification__body">
-          <h1>It seems that you've already filled out an application for Shellhacks</h1>
-          <p>Here is an overview of the submitted application</p>
+          <h1>Your application has been submitted!</h1>
+          <p>Here is an overview of your application</p>
           <br />
           {formatApplication(store.application)}
         </div>
@@ -83,6 +84,10 @@ const ApplicationPage = ({ store }) => {
   return (
     <div className="ApplicationPage">
       <div className="ApplicationPage__form-container">
+      <div className="ApplicationPage__funnel">
+            <img src={Funnel} alt ="Funnel SVG"/>
+        </div>
+        <br/><br/>
         <div className="ApplicationPage__header">
           <p className="ApplicationPage__title">Application</p>
           <p className="ApplicationPage__sub-title">

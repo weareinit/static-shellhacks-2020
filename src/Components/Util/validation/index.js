@@ -29,14 +29,14 @@ export const validPassword = (
     .string()
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\#@$!%*?&])[A-Za-z\d@$!%*?&\#-]{8,25}$/,
-      'Password must have at least one uppercase letter, lowercase letter, one number and one special character and must be between 8 and 25 characters'
+      'Password must be between 8 and 25 characters, have at least one uppercase letter, lowercase letter, number, and special character'
     )
     .min(8, min)
     .max(25, max)
 }
 
 export const validPhoneNumber = (
-  message = 'Phone number must be one of the following format XXX-XXX-XXXX'
+  message = 'Phone number must be in the following format XXX-XXX-XXXX'
 ) => {
   return yup.string().matches(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, message)
 }
@@ -69,7 +69,7 @@ export const validPDF = () => {
 }
 
 export const validURL = () => {
-  return yup.mixed().test('url,', 'please enter a valid url', value => {
+  return yup.mixed().test('url,', 'Please enter a valid url', value => {
     if (!value) {
       return true
     }
@@ -84,6 +84,6 @@ export const validLastName = () => {
     .string()
     .matches(
       /^\w{2,20}((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?$/,
-      'must only contain letters spaces and hyphens'
+      'Must only contain letters, spaces, and hyphens'
     )
 }

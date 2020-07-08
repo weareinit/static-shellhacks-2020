@@ -104,7 +104,7 @@ const SignUpForm = props => {
   const Footer = () => (
     <>
       <button onClick={props.handleReturn} className="SignUpForm__return-btn">
-        Back
+        Home
       </button>
 
       <a className="SignUpForm__login-btn" href="/login">
