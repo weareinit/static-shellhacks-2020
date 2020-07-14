@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { object, reach, string as yupString } from 'yup'
-import { validEmail, validString, validPassword, validLastName } from '../Util/validation'
+import { validEmail, validFirstname, validPassword, validLastName } from '../Util/validation'
 import Form from '../Common/Form'
 import ReCAPTCHA from '../../Components/ReCaptcha'
 import './styles.sass'
@@ -61,7 +61,7 @@ const SignUpForm = props => {
 
   const schema = object().shape({
     email: validEmail(),
-    firstName: validString(),
+    firstName: validFirstname(),
     lastName: validLastName(),
     password: validPassword(),
     captcha: yupString().required('Captcha validation is required')

@@ -79,6 +79,15 @@ export const validURL = () => {
   })
 }
 
+export const validFirstName = () => {
+  return yup
+    .string()
+    .matches(
+      /^\w{2,20}((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?((\s|-)\w{2,20})?$/,
+      'Must only contain letters, spaces, and hyphens'
+    )
+}
+
 export const validLastName = () => {
   return yup
     .string()
