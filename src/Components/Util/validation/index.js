@@ -27,12 +27,8 @@ export const validPassword = (
 ) => {
   return yup
     .string()
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\#@$!%*?&])[A-Za-z\d@$!%*?&\#-]{8,25}$/,
-      'Password must be between 8 and 25 characters, have at least one uppercase letter, lowercase letter, number, and special character'
-    )
     .min(8, min)
-    .max(25, max)
+    .max(30, max)
 }
 
 export const validPhoneNumber = (
