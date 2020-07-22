@@ -25,6 +25,23 @@ const DashBoard = ({ store }) => {
                 <h3>Announcements</h3>
                 <center>Check back often to get the latest ShellHacks updates!</center>
 
+                <br/>
+                <div className="DashboardPage__schedule-header">
+              <div align ="left"><h4> 🎮&nbsp;&nbsp;Giveaway #2: &nbsp;Win a Nintendo Switch with Animal Crossing!</h4>
+                <br/>
+                  <p>Fill out your application by Friday, July 24 and you'll automatically be entered 
+                    to win a Nintendo Switch with Animal Crossing! Be the next Steven Wang!</p></div>
+                    <div align ="right">July 21, 2020</div>
+              </div> 
+
+              <br/>
+                <div className="DashboardPage__schedule-header">
+              <div align ="left"><h4> 🎉&nbsp;&nbsp;Congratulations to our AirPods winner!</h4>
+                <br/>
+                  <p>Steven Wang is our lucky AirPods winner! We'll be reaching out to you with the details 📦</p></div>
+                    <div align ="right">July 21, 2020</div>
+              </div> 
+
               <br />
               <div className="DashboardPage__schedule-header">
                 <div align ="left"><h4>✏️ &nbsp;&nbsp;Applications are now open!</h4>
@@ -32,17 +49,18 @@ const DashBoard = ({ store }) => {
                 <p>Ready to apply? Make sure you have verified your email address and then proceed to fill out our application.
                   After submitting, your application status will change to "Applied." We'll be reviewing your application in the 
                   coming weeks and sending acceptances in waves once applications close!
-                </p>
-                </div>
+                </p></div>
+                    <div align ="right">July 13, 2020</div>
               </div>
 
               <br />
               <div className="DashboardPage__schedule-header">
-              <div align ="left"><h4> 😱&nbsp;&nbsp;Win a pair of AirPods!</h4>
+              <div align ="left"><h4> 😱&nbsp;&nbsp;Giveaway #1: &nbsp;Win a pair of AirPods!</h4>
                 <br/>
                   <p>Be one of the first 100 students to submit your application 
                     and enter for a chance to win a pair of AirPods!</p>
-                </div>
+                    </div>
+                    <div align ="right">July 13, 2020</div>
               </div> 
               <br/>
 
@@ -54,7 +72,8 @@ const DashBoard = ({ store }) => {
                     chat with fellow attendees, discuss project ideas, find team members, 
                     and more. You can also contact the event organizers and ask us any questions you have!
                     Join Discord <a href="https://discord.com/invite/upefiu"><u>here</u></a>!</p>
-                </div>
+                    </div>
+                    <div align ="right">July 13, 2020</div>
               </div> 
               <br/>
 
@@ -66,7 +85,8 @@ const DashBoard = ({ store }) => {
                     using the hashtag <b>#ShellHacks</b>. We're running social media contests 
                     all summer long and giving away lots of cool prizes to the best posts! 
                     Follow our Instagram <a href="https://www.instagram.com/upefiu/"><u>here</u></a>!</p>
-                </div>
+                    </div>
+                    <div align ="right">July 13, 2020</div>
               </div>                
 
             </div>

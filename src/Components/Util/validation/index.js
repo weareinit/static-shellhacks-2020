@@ -46,7 +46,7 @@ const getValidDobRange = () => {
 export const validDate = (
   max = 'Must be at least 18 years old',
   required = 'Date is required',
-  format = 'Date must be in the following format DD/MM/YYYY'
+  format = 'Date must be in the following format MM/DD/YYYY'
 ) => {
   return yup
     .mixed()

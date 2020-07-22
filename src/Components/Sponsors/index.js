@@ -17,6 +17,7 @@ import JetBrains from '../../assets/Sponsors/Logo__Jetbrains.svg'
 import StickerMule from '../../assets/Sponsors/Logo__Stickermule.svg'
 import MLH from '../../assets/Sponsors/Logo__MLH.svg'
 import Rocket from '../../assets/Sponsors/Rocket.svg'
+import DigitalOcean from '../../assets/Sponsors/Logo__DigitalOcean.svg'
 
 const sponsors = [
   Google,
@@ -30,6 +31,7 @@ const sponsors = [
   FloridaPanthers,
   Heroku,
   Twilio,
+  DigitalOcean,
   Wolfram,
   JetBrains,
   StickerMule,
