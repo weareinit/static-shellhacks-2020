@@ -28,10 +28,6 @@
     "value": "Florida Agricultural and Mechanical University"
   },
   {
-    "label": "University of South Florida-Main Campus",
-    "value": "University of South Florida-Main Campus"
-  },
-  {
     "label": "University of Central Florida",
     "value": "University of Central Florida"
   },
@@ -19816,6 +19812,10 @@
     "value": "Otero Junior College"
   },
   {
+    "label": "Other",
+    "value": "Other"
+  },
+  {
     "label": "Otis College of Art and Design",
     "value": "Otis College of Art and Design"
   },
@@ -28920,12 +28920,8 @@
     "value": "University of South Dakota"
   },
   {
-    "label": "University of South Florida-Sarasota-Manatee",
-    "value": "University of South Florida-Sarasota-Manatee"
-  },
-  {
-    "label": "University of South Florida-St Petersburg",
-    "value": "University of South Florida-St Petersburg"
+    "label": "University of South Florida",
+    "value": "University of South Florida"
   },
   {
     "label": "University of Southern California",

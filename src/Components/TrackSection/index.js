@@ -9,6 +9,7 @@ import Web from "../../assets/branding/Web_Track_Icon.svg"
 import IT from "../../assets/branding/IT_Track_Icon.svg"
 import Hardware from "../../assets/branding/Hardware_Track_Icon.svg"
 import Mobile from "../../assets/branding/Mobile_Track_Icon.svg"
+import Design from "../../assets/branding/Design_Track_Icon.svg"
 
 const TrackSection = props => {
   const tracks = [
@@ -17,7 +18,8 @@ const TrackSection = props => {
                     {title: "Artificial Intelligence", body: "Implement machine learning algorithms to automate tasks and make predictions", image: AI},
                     {title: "Game Development", body: "Create virtual experiences that bring characters and stories to life", image: GameDev},
                     {title: "Information Technology", body: "Dive into cloud computing, ethical hacking, and cybersecurity", image: IT},
-                    {title: "Hardware", body: "Work with microcontrollers to tackle and solve real-world problems", image: Hardware}
+                    {title: "Hardware", body: "Work with microcontrollers to tackle and solve real-world problems", image: Hardware},
+                    {title: "Design & Project Mgnt", body: "Create the ultimate user experience for your site or mobile app", image: Design}
                   ]
   return (
     <div className="TrackSection">
