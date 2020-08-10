@@ -18,16 +18,23 @@ import StickerMule from '../../assets/Sponsors/Logo__Stickermule.svg'
 import MLH from '../../assets/Sponsors/Logo__MLH.svg'
 import Rocket from '../../assets/Sponsors/Rocket.svg'
 import DigitalOcean from '../../assets/Sponsors/Logo__DigitalOcean.svg'
+import OOP from '../../assets/Sponsors/Logo__OOP.svg'
+import Autonation from '../../assets/Sponsors/Logo__Autonation.svg'
+import Replit from '../../assets/Sponsors/Logo__Replit.svg'
 
 const sponsors = [
   Google,
   Twitter,
   StateFarm,
   Assurant,
+  Autonation,
   XBOX,
+  OOP,
   Balsamiq,
   Linode,
+  FifteenSeventeen,
   GCP,
+  Replit,
   FloridaPanthers,
   Heroku,
   Twilio,
@@ -35,6 +42,7 @@ const sponsors = [
   Wolfram,
   JetBrains,
   StickerMule,
+  MLH,
 ]
 
 const Sponsors = () => {
