@@ -48,6 +48,14 @@ const HomePageHero = props => {
                   Sponsor
                 </a>
 
+                {/* <a
+                  className="mentor-btn"
+                  href="https://airtable.com/shrqW2GU8emZgji2t"
+                  target="_top"
+                >
+                  Mentor
+                </a> */}
+
                 {props.user ? (
                   <button role="button" className="old-site-btn" onClick={logout}>
                     Logout
@@ -74,6 +82,9 @@ const HomePageHero = props => {
                 <a href="https://www.linkedin.com/company/28673457" rel="_blank">
                   <img src={linkedinLogo} alt="linkedin-logo" />
                 </a>
+              </div>
+              <div>
+                <a href="http://mlh.io/code-of-conduct/">MLH Code of Conduct</a>
               </div>
             </div>
           </div>

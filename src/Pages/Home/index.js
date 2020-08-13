@@ -6,6 +6,7 @@ import TrackSection from '../../Components/TrackSection'
 import FAQSection from '../../Components/FAQSection/FAQSection'
 import Sponsors from '../../Components/Sponsors'
 import AuthStore from '../../store/AuthStore'
+import MLHBadge from '../../Components/MLHBadge'
 import { AuthStoreConsumer } from '../../store/AuthStore/Context'
 import LoadingPage from '../Loading'
 import DashboardContainer from '../../Shells/DashboardContainer'
@@ -14,11 +15,18 @@ import './styles.sass'
 const HomePage = ({ store }) => {
   return (
     <div className={!!store.user ? '' : 'HomePage'}>
+      <MLHBadge />
       <HomePageHero user={!!store.user} logout={store.logout} />
       <About />
-      <TrackSection /> 
-      <br/><br/><br/><br/><br/><br/><br/>
-      <FAQSection /> 
+      <TrackSection />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <FAQSection />
       <HostSection />
       <Sponsors />
     </div>

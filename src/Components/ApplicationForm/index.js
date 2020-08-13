@@ -363,6 +363,12 @@ const SignUpForm = props => {
             }
           ]
         },
+        // {
+        //   name: 'checkbox',
+        //   label: 'You give us permission to share your email with sponsors',
+        //   placeholder: '',
+        //   type: 'boolean'
+        // },
         {
           name: 'resume',
           label: 'Resume * (PDF only)',
