@@ -48,6 +48,14 @@ const HomePageHero = props => {
                   Sponsor
                 </a>
 
+                {/* <a
+                  className="mentor-btn"
+                  href="https://airtable.com/shrqW2GU8emZgji2t"
+                  target="_top"
+                >
+                  Mentor
+                </a> */}
+
                 {props.user ? (
                   <button role="button" className="old-site-btn" onClick={logout}>
                     Logout
