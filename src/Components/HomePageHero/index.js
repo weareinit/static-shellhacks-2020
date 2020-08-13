@@ -83,6 +83,9 @@ const HomePageHero = props => {
                   <img src={linkedinLogo} alt="linkedin-logo" />
                 </a>
               </div>
+              <div>
+                <a href="http://mlh.io/code-of-conduct/">MLH Code of Conduct</a>
+              </div>
             </div>
           </div>
           <div className="city">
