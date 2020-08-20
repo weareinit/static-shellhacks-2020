@@ -21,18 +21,25 @@ import DigitalOcean from '../../assets/Sponsors/Logo__DigitalOcean.svg'
 import OOP from '../../assets/Sponsors/Logo__OOP.svg'
 import Autonation from '../../assets/Sponsors/Logo__Autonation.svg'
 import Replit from '../../assets/Sponsors/Logo__Replit.svg'
+import Ripplematch from '../../assets/Sponsors/Logo__Ripplematch.svg'
+import SCIS from '../../assets/Sponsors/Logo__SCIS.svg'
+import GEApp from '../../assets/Sponsors/Logo__GEAppliances.svg'
+import Lyft from '../../assets/Sponsors/Logo__Lyft.svg'
 
 const sponsors = [
   Google,
   Twitter,
   StateFarm,
+  GEApp,
   Assurant,
   Autonation,
   XBOX,
+  Lyft,
   OOP,
   Balsamiq,
   Linode,
   FifteenSeventeen,
+  Ripplematch,
   GCP,
   Replit,
   FloridaPanthers,
@@ -42,6 +49,7 @@ const sponsors = [
   Wolfram,
   JetBrains,
   StickerMule,
+  SCIS,
   MLH,
 ]
 

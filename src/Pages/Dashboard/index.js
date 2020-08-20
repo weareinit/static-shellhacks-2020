@@ -27,6 +27,25 @@ const DashBoard = ({ store }) => {
 
                 <br/>
                 <div className="DashboardPage__schedule-header">
+                <div align ="left"><h4> 💸&nbsp;&nbsp;Giveaway #3: &nbsp;Win $100 Amazon Gift Card!</h4>
+                <br/>
+                  <p>We're giving away a $100 Amazon gift card to one lucky winner! Head to our Instagram page and 
+                    follow the steps in this <a href="https://www.instagram.com/p/CD4mgefAJvf/"><u>post</u></a> for a chance to win.⁠</p>
+                    <div align ="right">August 19, 2020</div>
+                  </div> 
+                </div>
+
+              <br/>
+                <div className="DashboardPage__schedule-header">
+              <div align ="left"><h4> 🎉&nbsp;&nbsp;Congratulations to our Nintendo Switch winner!</h4>
+                <br/>
+                  <p>Antonella Avogadro wins a Nintendo Switch with Animal Crossing for being among our second wave of students to register! 
+                    We'll be reaching out to you with the details 👾</p></div>
+                    <div align ="right">August 5, 2020</div>
+              </div> 
+
+              <br/>
+              <div className="DashboardPage__schedule-header">
               <div align ="left"><h4> 🎮&nbsp;&nbsp;Giveaway #2: &nbsp;Win a Nintendo Switch with Animal Crossing!</h4>
                 <br/>
                   <p>Fill out your application by Friday, July 24 and you'll automatically be entered 
