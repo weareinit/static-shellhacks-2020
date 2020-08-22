@@ -14,6 +14,8 @@ const Input = props => {
       return <FileInputWrapper {...props} />
     case 'display':
       return <DisplayInput {...props} />
+    case 'checkbox':
+      return <CheckboxInput {...props} />
     default:
       return <TextInput {...props} />
   }
@@ -46,6 +48,33 @@ const TextInput = ({
         {...(validate ? { validate } : {})}
         disabled={disabled}
       />
+    </div>
+  )
+}
+
+const CheckboxInput = ({
+  name,
+  label,
+  className,
+  type,
+  id,
+  validate,
+  disabled = false
+}) => {
+  const TextInputClasses = cx('CheckboxInput', {
+    [className]: className
+  })
+  return (
+    <div className={TextInputClasses}>
+      {/* Dangerously set inner HTML here so we can use a link in the label */}
+      {label && <label htmlFor={name} dangerouslySetInnerHTML={{__html: label}}></label>}
+      <Field
+        type={type}
+        name={name}
+        id={id}
+        {...(validate ? { validate } : {})}
+        disabled={disabled}
+      /> I agree
     </div>
   )
 }

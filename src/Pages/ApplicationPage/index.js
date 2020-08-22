@@ -38,6 +38,10 @@ const ApplicationPage = ({ store }) => {
     delete app.dob
     app.attendedShellhacksBefore = app.attendedShellHacks
     delete app.attendedShellHacks
+    app.MLHCodeOfConductAgreement = (app.codeOfConduct ? "Accepted" : "Denied")  
+    delete app.codeOfConduct
+    app.MLHTermsAndConditionsAgreement = (app.mlhTermsAndConditions ? "Accepted" : "Denied")  
+    delete app.mlhTermsAndConditions
     return (
       <div className="ApplicationPreview">
         {Object.keys(app).map(k => {
