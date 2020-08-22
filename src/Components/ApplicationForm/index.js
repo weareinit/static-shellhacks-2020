@@ -1,6 +1,6 @@
 import React from 'react'
 import { object, reach, string } from 'yup'
-import { validPhoneNumber, validDate, validPDF, validURL } from '../Util/validation'
+import { validPhoneNumber, validDate, validPDF, validURL, boxIsChecked } from '../Util/validation'
 import SectionForm from '../Common/SectionForm'
 import schools from '../../config/schools.json'
 import majors from '../../config/majors.json'
@@ -378,6 +378,25 @@ const SignUpForm = props => {
           className: 'file'
         }
       ]
+    },
+    {
+      title: 'MLH Agreement',
+      inputs: [
+        {
+          name: 'codeOfConduct',
+          label: 'I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>. *',
+          type: 'checkbox',
+          id: 'codeOfConduct',
+          className: 'checkbox',
+        },
+        {
+          name: 'mlhTermsAndConditions',
+          label: 'I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>. *',
+          type: 'checkbox',
+          id: 'mlhTermsAndConditions',
+          className: 'checkbox',
+        }
+      ]
     }
   ]
 
@@ -403,7 +422,9 @@ const SignUpForm = props => {
     website: validURL(),
     attendedShellHacks: string().required(),
     howDidYouHear: string().required(),
-    resume: validPDF().required()
+    resume: validPDF().required(),
+    codeOfConduct: boxIsChecked(),
+    mlhTermsAndConditions: boxIsChecked(),
   })
 
   const validateHelper = async (value, path) =>
@@ -436,7 +457,9 @@ const SignUpForm = props => {
     website: async s => await validateHelper(s, 'website'),
     attendedShellHacks: async s => await validateHelper(s, 'attendedShellHacks'),
     howDidYouHear: async s => await validateHelper(s, 'howDidYouHear'),
-    resume: async s => await validateHelper(s, 'resume')
+    resume: async s => await validateHelper(s, 'resume'),
+    codeOfConduct: async s => await validateHelper(s, 'codeOfConduct'),
+    mlhTermsAndConditions: async s => await validateHelper(s, 'mlhTermsAndConditions'),
   }
 
   const validation = () => ({})
@@ -463,7 +486,9 @@ const SignUpForm = props => {
     website: '',
     attendedShellHacks: '',
     howDidYouHear: '',
-    resume: null
+    resume: null,
+    codeOfConduct: false,
+    mlhTermsAndConditions: false,
   }
 
   const onSubmit = values => {

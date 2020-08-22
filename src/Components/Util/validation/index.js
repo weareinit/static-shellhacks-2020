@@ -11,6 +11,15 @@ export const validEmail = (
     .required(requiredField)
 }
 
+export const boxIsChecked = (
+  requiredField = 'This box is required',
+) => {
+  return yup
+    .boolean()
+    .oneOf([true], requiredField)
+    .required(requiredField)
+}
+
 export const validString = (
   max = 'Field cannot be longer than 20 characters',
   requiredField = 'This field is required'

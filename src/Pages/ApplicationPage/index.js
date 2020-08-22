@@ -36,6 +36,8 @@ const ApplicationPage = ({ store }) => {
     delete app.howDidYouHear
     app.dateOfBirth = app.dob
     delete app.dob
+    delete app.codeOfConduct
+    delete app.mlhTermsAndConditions
     app.attendedShellhacksBefore = app.attendedShellHacks
     delete app.attendedShellHacks
     return (
