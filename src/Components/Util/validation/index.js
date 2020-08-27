@@ -1,6 +1,8 @@
 import * as yup from 'yup'
 import moment from 'moment'
 
+const FILE_SIZE_LIMIT = 20971520 // 20 MB, 2^20 * 20
+
 export const validEmail = (
   invalidEmail = 'Field must be a valid email',
   requiredField = 'Email is required'
@@ -65,11 +67,10 @@ export const validDate = (
 }
 
 export const validPDF = () => {
-  const FILE_SIZE = Math.sqrt(1024, 2) * 1000
   const SUPPORTED_FORMATS = ['application/pdf']
   return yup
     .mixed()
-    .test('fileSize', 'File Size is too large', value => value.size > FILE_SIZE)
+    .test('fileSize', 'File Size is too large', value => value.size < FILE_SIZE_LIMIT) // resume must be under 20 MB
     .test('fileType', 'Unsupported File Format', value => SUPPORTED_FORMATS.includes(value.type))
 }
 
