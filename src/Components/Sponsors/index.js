@@ -25,31 +25,57 @@ import Ripplematch from '../../assets/Sponsors/Logo__Ripplematch.svg'
 import SCIS from '../../assets/Sponsors/Logo__SCIS.svg'
 import GEApp from '../../assets/Sponsors/Logo__GEAppliances.svg'
 import Lyft from '../../assets/Sponsors/Logo__Lyft.svg'
+import Salesforce from '../../assets/Sponsors/Logo__Salesforce.svg'
+import Microsoft from '../../assets/Sponsors/Logo__Microsoft.svg'
+import Bloomberg from '../../assets/Sponsors/Logo__Bloomberg.svg'
+import Pinterest from '../../assets/Sponsors/Logo__Pinterest.svg'
+import Codepath from '../../assets/Sponsors/Logo__CodePath.svg'
+import eMerge from '../../assets/Sponsors/Logo__eMerge.svg'
+import Chevron from '../../assets/Sponsors/Logo__Chevron.svg'
+import GoldmanSachs from '../../assets/Sponsors/Logo__GoldmanSachs.svg'
+import MatrixLabs from '../../assets/Sponsors/Logo__MatrixLabs.svg'
+import RoyalCarribean from '../../assets/Sponsors/Logo__RoyalCarribean.svg'
+import Deloitte from '../../assets/Sponsors/Logo__Deloitte.svg'
+import CEC from '../../assets/Sponsors/Logo__CEC.svg'
+import FCA from '../../assets/Sponsors/Logo__FCA.svg'
 
 const sponsors = [
+  Microsoft,
+  XBOX,
   Google,
   Twitter,
   StateFarm,
   GEApp,
   Assurant,
   Autonation,
-  XBOX,
+  FCA,
+  Salesforce,
+  Bloomberg,
+  GoldmanSachs,
   Lyft,
+  Deloitte,
+  RoyalCarribean,
+  Chevron,
   OOP,
+  Pinterest,
   Balsamiq,
   Linode,
   FifteenSeventeen,
   Ripplematch,
   GCP,
   Replit,
+  MatrixLabs,
   FloridaPanthers,
   Heroku,
   Twilio,
   DigitalOcean,
+  Codepath,
   Wolfram,
   JetBrains,
   StickerMule,
+  CEC,
   SCIS,
+  eMerge,
   MLH,
 ]
 
