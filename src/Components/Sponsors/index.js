@@ -36,6 +36,8 @@ import GoldmanSachs from '../../assets/Sponsors/Logo__GoldmanSachs.svg'
 import MatrixLabs from '../../assets/Sponsors/Logo__MatrixLabs.svg'
 import RoyalCarribean from '../../assets/Sponsors/Logo__RoyalCarribean.svg'
 import Deloitte from '../../assets/Sponsors/Logo__Deloitte.svg'
+import CEC from '../../assets/Sponsors/Logo__CEC.svg'
+import FCA from '../../assets/Sponsors/Logo__FCA.svg'
 
 const sponsors = [
   Microsoft,
@@ -46,6 +48,7 @@ const sponsors = [
   GEApp,
   Assurant,
   Autonation,
+  FCA,
   Salesforce,
   Bloomberg,
   GoldmanSachs,
@@ -70,6 +73,7 @@ const sponsors = [
   Wolfram,
   JetBrains,
   StickerMule,
+  CEC,
   SCIS,
   eMerge,
   MLH,
