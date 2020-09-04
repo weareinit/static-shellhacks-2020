@@ -56,6 +56,19 @@ export default function ApplicationProvider({ children }) {
     loading.set(false)
   }
 
+  const confirm = applicationId => {
+    error.set('')
+    return ApplicationAPI.confirm(applicationId)
+      .then(({ data }) => {
+        application.set(data)
+        return { success: true }
+      })
+      .catch(err => {
+        console.error(err)
+        return { success: false }
+      })
+  }
+
   useEffect(() => {
     getApplication()
   }, [])
@@ -64,7 +77,8 @@ export default function ApplicationProvider({ children }) {
     application: application.value,
     loading: loading.value,
     error: error.value,
-    create
+    create,
+    confirm
   }
 
   return <ApplicationStoreProvider value={store}>{children}</ApplicationStoreProvider>

@@ -36,6 +36,15 @@ const ApplicationAPI = {
         Authorization: getAuthToken()
       }
     })
+  },
+  confirm: applicationId => {
+    return client.put('/application/confirm', {
+      params: { applicationId },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: getAuthToken()
+      }
+    })
   }
 }
 
