@@ -38,7 +38,9 @@ const ApplicationAPI = {
     })
   },
   confirm: applicationId => {
-    return client.put('/application/confirm', {
+    return client({
+      method: 'put',
+      url: '/application/confirm', 
       params: { applicationId },
       headers: {
         'Content-Type': 'application/json',
