@@ -19,6 +19,12 @@ const ApplicationPage = ({ store }) => {
     if (message.success) history.push('/dashboard')
     setError(message.error)
   }
+  const handleConfirm = async data => {
+    setError('')
+    const message = await store.confirm(store.application._id)
+    if (message.success) history.push('/dashboard')
+    setError(message.error)
+  }
   const resendVerificationEmail = e => {
     e.preventDefault()
     store.resendVerificationEmail().then(message => {
@@ -68,6 +74,20 @@ const ApplicationPage = ({ store }) => {
             received an email, you can click the button to resend the email.
           </p>
           <button onClick={resendVerificationEmail}>Resend Verification</button>
+          <br />
+        </div>
+      </div>
+    )
+  }
+  if (store.application?.status == "ACCEPTED") {
+    return (
+      <div className="Verification">
+        <div className="Verification__body">
+          <h1>Please click the button below to confirm your attendance</h1>
+          <p>
+            By confirming my attendance, I confirm that I am planning on attending ShellHacks 2020.
+          </p>
+          <button onClick={handleConfirm}>Confirm</button>
           <br />
         </div>
       </div>

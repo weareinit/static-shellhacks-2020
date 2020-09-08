@@ -17,6 +17,7 @@ const DashBoard = ({ store }) => {
       <div className="DashboardPage">
         <div className="DashboardPage__header">
           <h3>{`Welcome ${store.user?.firstName}!`}</h3>
+          <h4>{store?.application?.status == 'ACCEPTED' ? 'Make sure to confirm your attendance! Check your application to confirm.' : ''}</h4>
           <div className="DashboardPage__application-status">
             Application Status: {store?.application ? store.application.status : 'Not Applied'}
           </div>

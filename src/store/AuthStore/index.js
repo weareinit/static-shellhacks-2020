@@ -27,7 +27,7 @@ const AuthStore = ({ children }) => {
       .catch(err => {
         loading.set(false)
         error.set(
-          err.response ? err.response.data.message : 'There was an error,please try again later'
+          err.response ? err.response.data.message : 'There was an error, please try again later'
         )
       })
   }
