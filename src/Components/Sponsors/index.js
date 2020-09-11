@@ -39,6 +39,8 @@ import Deloitte from '../../assets/Sponsors/Logo__Deloitte.svg'
 import CEC from '../../assets/Sponsors/Logo__CEC.svg'
 import FCA from '../../assets/Sponsors/Logo__FCA.svg'
 import Facebook from '../../assets/Sponsors/Logo__Facebook.svg'
+import CapitalOne from '../../assets/Sponsors/Logo__CapitalOne.svg'
+import Robinhood from '../../assets/Sponsors/Logo__RobinHood.svg'
 
 const sponsors = [
   Microsoft,
@@ -53,7 +55,9 @@ const sponsors = [
   Salesforce,
   Bloomberg,
   GoldmanSachs,
+  Robinhood,
   Facebook,
+  CapitalOne,
   Lyft,
   Deloitte,
   RoyalCarribean,
