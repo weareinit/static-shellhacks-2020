@@ -35,7 +35,7 @@ const SignUpForm = props => {
         },
         {
           name: 'address',
-          label: 'Address (Your address will only be used to potentially ship any swag/prizes)',
+          label: 'Address (optional - Your address will only be used to potentially ship any swag/prizes)',
           placeholder: 'Street ',
           type: 'text',
           id: 'street',
@@ -43,7 +43,7 @@ const SignUpForm = props => {
         },
         {
           name: 'address2',
-          label: 'Address 2',
+          label: 'Address 2 (optional)',
           placeholder: 'Apt ',
           type: 'text',
           id: 'apt',
@@ -51,7 +51,7 @@ const SignUpForm = props => {
         },
         {
           name: 'city',
-          label: 'City',
+          label: 'City (optional)',
           placeholder: 'Miami',
           type: 'text',
           id: 'city',
@@ -59,7 +59,7 @@ const SignUpForm = props => {
         },
         {
           name: 'state',
-          label: 'State',
+          label: 'State (optional)',
           placeholder: 'Select one',
           type: 'dropdown',
           id: 'text',
@@ -119,7 +119,7 @@ const SignUpForm = props => {
         },
         {
           name: 'zip',
-          label: 'Zip',
+          label: 'Zip (optional)',
           placeholder: '33189 ',
           type: 'number',
           id: 'zip',
@@ -190,7 +190,7 @@ const SignUpForm = props => {
       inputs: [
         {
           name: 'schoolName',
-          label: 'School Name *',
+          label: 'School Name * (Please select "other" if your school is not listed)',
           placeholder: 'Select one',
           type: 'searchable-dropdown',
           id: 'schoolName',
