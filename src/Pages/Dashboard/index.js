@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import history from '../../history'
 import AuthPage from '../../Shells/AuthPage'
 import DashboardContainer from '../../Shells/DashboardContainer'
 import ApplicationStore from '../../store/ApplicationStore/'
@@ -8,6 +9,13 @@ import './styles.sass'
 
 const DashBoard = ({ store }) => {
   const [isOpen, setIsOpen] = useState(true)
+  const [error, setError] = useState('')
+  const handleConfirm = async data => {
+    setError('')
+    const message = await store.confirm(store.application._id)
+    if (message.success) history.push('/dashboard')
+    setError(message.error)
+  }
   return (
     <DashboardContainer isOpen={isOpen} setIsOpen={setIsOpen} page="dashboard">
       <div className="DashboardPage__robot">
@@ -17,10 +25,23 @@ const DashBoard = ({ store }) => {
       <div className="DashboardPage">
         <div className="DashboardPage__header">
           <h3>{`Welcome ${store.user?.firstName}!`}</h3>
-          <h4>{store?.application?.status == 'ACCEPTED' ? 'Make sure to confirm your attendance! Check your application to confirm.' : ''}</h4>
           <div className="DashboardPage__application-status">
             Application Status: {store?.application ? store.application.status : 'Not Applied'}
           </div>
+          {
+          (store?.application?.status == "ACCEPTED") 
+            ? <div className="DashboardPage__confirmation">
+                <div className="DashboardPage__confirmation-body">
+                  <h2>Please click the button below to confirm your attendance by Wednesday, September 23rd 11:59PM EST</h2>
+                  <p>
+                    By confirming my attendance, I confirm that I am planning on attending ShellHacks 2020.
+                  </p>
+                  <button onClick={handleConfirm}>Confirm Now</button>
+                  <br />
+                </div>
+              </div> 
+            : ''
+          }
           <div className="DashboardPage__body">
             <div className="DashboardPage__schedule">
                 <h3>Announcements</h3>
