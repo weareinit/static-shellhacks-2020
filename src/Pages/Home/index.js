@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import HomePageHero from '../../Components/HomePageHero'
 import About from '../../Components/About'
 import HostSection from '../../Components/HostSection'
+import CoHostSection from '../../Components/CoHostSection'
+import CommunityPartners from '../../Components/CommunityPartners'
 import TrackSection from '../../Components/TrackSection'
 import FAQSection from '../../Components/FAQSection/FAQSection'
 import Sponsors from '../../Components/Sponsors'
@@ -28,7 +30,9 @@ const HomePage = ({ store }) => {
       <br />
       <FAQSection />
       <HostSection />
+      <CoHostSection />
       <Sponsors />
+      <CommunityPartners />
     </div>
   )
 }
