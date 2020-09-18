@@ -17,7 +17,7 @@ const DashBoard = ({ store }) => {
     setError(message.error)
   }
   return (
-    <DashboardContainer isOpen={isOpen} setIsOpen={setIsOpen} page="dashboard">
+    <DashboardContainer isOpen={isOpen} setIsOpen={setIsOpen} page="dashboard" application={store.application}>
       <div className="DashboardPage__robot">
         <img src={Robot} alt ="Robot SVG"/>
       </div>

@@ -38,14 +38,17 @@ class DashboardContainer extends Component {
               <a href="/application">
                 <li className={this.menuItemClasses('application')}>Application</li>
               </a>
+              {
+              (this.props.application?.status == "CONFIRMED!") 
+                ? <a href="http://go.fiu.edu/shellhacksguide" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('guide')}>
+                Guide</li></a>
+                : ''
+              }
               <a href="/">
                 <li className={this.menuItemClasses('logout')} onClick={this.logout}>
                   Logout
                 </li>
               </a>
-              {/* <a href="/profile">
-                <li className={this.menuItemClasses('profile')}>Profile</li>
-              </a> */}
             </ul>
             <div className="DashboardContainer__social-media-container">
               <a href="http://discord.gg/upefiu" rel="_blank">
