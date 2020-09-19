@@ -35,6 +35,9 @@ class DashboardContainer extends Component {
               <a href="/dashboard">
                 <li className={this.menuItemClasses('dashboard')}>Dashboard</li>
               </a>
+              <a href="/schedule">
+                <li className={this.menuItemClasses('schedule')}>Schedule</li>
+              </a>
               <a href="/application">
                 <li className={this.menuItemClasses('application')}>Application</li>
               </a>

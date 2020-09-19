@@ -6,6 +6,7 @@ import DashBoard from './Pages/Dashboard'
 import SignUpPage from './Pages/SignUpPage'
 import LoginPage from './Pages/LoginPage'
 import ApplicationPage from './Pages/ApplicationPage'
+import SchedulePage from './Pages/SchedulePage'
 import VerifyEmailPage from './Pages/VerifyEmailPage'
 // import ProfilePage from './Pages/ProfilePage'
 import ResetPasswordPage from './Pages/ResetPasswordPage'
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signUp" exact component={SignUpPage} />
         <Route path="/login" exact component={LoginPage} />
         <Route path="/application" exact component={ApplicationPage} />
+        <Route path="/schedule" exact component={SchedulePage} />
         {/* <Route path="/profile" exact component={ProfilePage} /> */}
         <Route path="/verify/:token" exact component={VerifyEmailPage} />
         <Route path="/resetPassword/:token?" exact component={ResetPasswordPage} />

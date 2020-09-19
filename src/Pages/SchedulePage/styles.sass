@@ -1,0 +1,33 @@
+@import '../../sass/main.sass'
+
+.SchedulePage
+  min-height: 100vh
+  height: 100%
+  display: flex
+  padding: 20px
+  &__funnel
+    margin: auto
+    width: 200px
+    height: 200px
+  &__schedule
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    border-radius: 20px
+  &__header
+    text-align: center
+  &__title
+    font-size: 30px
+    font-weight: 800
+    font-style: italic
+    letter-spacing: 1.3px
+    margin-bottom: 15px
+    @media(min-width: 752px)
+      font-size: 35px
+  &__sub-title
+    margin-bottom: 10px
+
+@media(min-width: $tablet-width)
+      margin-top: 50px
+@media(min-width: $max-desktopWidth)
+      margin-top: 70px
