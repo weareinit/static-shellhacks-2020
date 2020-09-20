@@ -11,172 +11,150 @@ import DashboardContainer from '../../Shells/DashboardContainer'
 import './styles.sass'
 
 const SchedulePage = () => {
+  let workshopColor = '#1D7D70'
+  let companyColor = '#DD8ABD'
+  let activityColor = '#1097DD'
+  let generalColor = '#AAAAAA'
   let eventList = [ // Add events here to reflect them on the schedule.
-    { title: 'Check-In on Discord', date: '2020-09-25', start: '2020-09-25 18:00', end: '2020-09-25 19:00' },
+    { title: '<b>Check-In</b>\n<em>Discord</em>', date: '2020-09-25', start: '2020-09-25 18:00', end: '2020-09-25 19:00', backgroundColor: generalColor },
     // General
-    { title: 'Opening Ceremony', date: '2020-09-25', start: '2020-09-25 19:00', end: '2020-09-25 20:00' },
-    // General
-    // Hopin
-    { title: 'Sponsor Fair', date: '2020-09-25', start: '2020-09-25 20:00', end: '2020-09-25 22:00' },
+    { title: '<b>Opening Ceremony</b>\n<em>Hopin</em>', date: '2020-09-25', start: '2020-09-25 19:00', end: '2020-09-25 20:00', backgroundColor: generalColor },
     // General
     // Hopin
-    { title: 'Hacking Begins!!', date: '2020-09-25', start: '2020-09-25 22:00'},
-    { title: 'Team Building', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00' },
+    { title: '<b>Sponsor Fair</b>\n<em>Hopin</em>', date: '2020-09-25', start: '2020-09-25 20:00', end: '2020-09-25 22:00', backgroundColor: generalColor },
+    // General
+    // Hopin
+    { title: '<b>Hacking Begins!</b>', date: '2020-09-25', start: '2020-09-25 22:00', backgroundColor: generalColor},
+    { title: '<b>Team Building</b>\n<em>Zoom</em>', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'GitHub Workshop', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00' },
+    { title: '<b>GitHub Workshop</b>\nWeb Dev Track\n<em>Hopin</em>', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00', backgroundColor: workshopColor },
     // Hopin
     // Web Development Track
-    { title: 'Finding Game Assets Workshop', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00' },
+    { title: '<b>Finding Game Assets</b>\nGame Dev Track\n<em>Hopin</em>', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00', backgroundColor: workshopColor },
     // Hopin
     // Game Development Track
-    { title: 'UI / UX Design Fundamentals Workshop', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00' },
+    { title: '<b>UI / UX Design Fundamentals</b>\nDesign Track\n<em>Hopin</em>', date: '2020-09-25', start: '2020-09-25 23:00', end: '2020-09-25 24:00', backgroundColor: workshopColor },
     // Hopin
     // Design & Project Mgnt Track
-
-    { title: 'UI / UX Prototyping with Adobe XD Workshop', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00' },
+    { title: '<b>UI / UX Prototyping with Adobe XD Workshop</b>\nDesign Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00', backgroundColor: workshopColor },
     // Hopin
     // Design & Project Mgnt Track
-    { title: 'GitHub Actions Workshop', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00'  },
+    { title: '<b>GitHub Actions Workshop</b>\nIT/Cybersec Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00', backgroundColor: workshopColor },
     // Hopin
     // IT & Cybersecurity Track
-    { title: 'Arduino Simulator Workshop', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00'  },
+    { title: '<b>Arduino Simulator Workshop</b>\nHardware Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00', backgroundColor: workshopColor },
     // Hopin
     // Hardware Track
-    { title: 'Python Workshop', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00'  },
+    { title: '<b>Python Workshop</b>\nAI Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 00:00', end: '2020-09-26 01:00', backgroundColor: workshopColor },
     // Hopin
     // Artificial Intelligence Track
-
-    { title: 'Pixel Art / Animation Workshop', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 01:30'  },
+    { title: '<b>Pixel Art / Animation</b>\nGame Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00', backgroundColor: workshopColor },
     // Hopin
     // Game Development Track
-    { title: 'HTML/CSS Workshops', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00'  },
+    { title: '<b>HTML/CSS Workshops</b>\nWeb Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00', backgroundColor: workshopColor },
     // Hopin
-    // Game Development Track
-    { title: 'Azure Workshop by Microsoft', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00'  },
+    // Web Development Track
+    { title: '<b>Azure by Microsoft</b>\nIT/Cybersec Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00', backgroundColor: workshopColor },
     // Hopin
     // IT & Cybersecurity Track
-    { title: 'Fusion 360 Workshop', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00'  },
+    { title: '<b>Fusion 360 Workshop</b>\nHardware Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00', backgroundColor: workshopColor },
     // Hopin
     // Hardware Track
-    { title: 'Flutter Workshop', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00'  },
+    { title: '<b>Flutter Workshop</b>\nMobile Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 01:00', end: '2020-09-26 02:00', backgroundColor: workshopColor },
     // Hopin
     // Mobile Development Track
-
-    { title: 'Among Us', date: '2020-09-26', start: '2020-09-26 02:00', end: '2020-09-26 03:00' },
+    { title: '<b>Among Us</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 02:00', end: '2020-09-26 03:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Mafia', date: '2020-09-26', start: '2020-09-26 03:00', end: '2020-09-26 04:00' },
+    { title: '<b>Mafia</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 03:00', end: '2020-09-26 04:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'JavaScript Workshop', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00'},
+    { title: '<b>JavaScript Workshop</b>\nWeb Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00', backgroundColor: workshopColor },
     // Hopin
     // Web Development Track
-    { title: 'Social Engineering Workshops', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00' },
+    { title: '<b>Social Engineering Workshop</b>\nIT/Cybersec Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00', backgroundColor: workshopColor },
     // Hopin
     // IT & Cybersecurity Track
-    { title: 'Intro to Neural Networks', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00' },
+    { title: '<b>Intro to Neural Networks</b>\nAI Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00', backgroundColor: workshopColor },
     // Hopin
     // Artificial Intelligence Track
-    { title: 'Swift Workshop', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00' },
+    { title: '<b>Swift Workshop</b>\nMobile Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 09:00', end: '2020-09-26 10:00', backgroundColor: workshopColor },
     // Hopin
     // Mobile Development Track
-
-    { title: 'React Workshop', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00' },
+    { title: '<b>React Workshop</b>\nWeb Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00', backgroundColor: workshopColor },
     // Hopin
     // Web Development Track
-    { title: 'GCP by GCP Workshop', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00' },
+    { title: '<b>GCP by GCP Workshop</b>\nIT/Cybersec Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00', backgroundColor: workshopColor },
     // Hopin
     // IT & Cybersecurity Track
-    { title: 'Unity Workshop by Microsoft', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00' },
+    { title: '<b>Unity Workshop by Microsoft</b>\nGame Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00', backgroundColor: workshopColor },
     // Hopin
     // Game Development Track
-    { title: 'Neural Machine Translation Workshop', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00' },
+    { title: '<b>Neural Machine Translation Workshop</b>\nAI Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00', backgroundColor: workshopColor },
     // Hopin
     // Artificial Intelligence Track
-    { title: 'Android Development Workshop', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00' },
+    { title: '<b>Android Development Workshop</b>\nMobile Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 10:00', end: '2020-09-26 11:00', backgroundColor: workshopColor },
     // Hopin
     // Mobile Development Track
-
-    { title: 'Node Workshop', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00' },
+    { title: '<b>Node.js Workshop</b>\nWeb Dev Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00', backgroundColor: workshopColor },
     // Hopin
     // Web Development Track
-    { title: 'Raspberry Pi by Matrix Labs', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00' },
+    { title: '<b>Raspberry Pi by Matrix Labs</b>\nHardware Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00', backgroundColor: workshopColor },
     // Hopin
     // Hardware Track
-    { title: 'Terraform Workshop by State Farm', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00' },
+    { title: '<b>Terraform Workshop by State Farm</b>\nIT/Cybersec Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00', backgroundColor: workshopColor },
     // Hopin
     // IT & Cybersecurity Track
-    { title: 'Graphic Design Workshop', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00' },
+    { title: '<b>Graphic Design Workshop</b>\nDesign Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 11:00', end: '2020-09-26 12:00', backgroundColor: workshopColor },
     // Hopin
     // Design & Project Mgnt Track
-
-    { title: 'Bob Ross MS Paint', date: '2020-09-26', start: '2020-09-26 12:00', end: '2020-09-26 13:00' },
+    { title: '<b>Bob Ross MS Paint</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 12:00', end: '2020-09-26 13:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-    { title: 'Bloomberg Tech Talk', date: '2020-09-26', start: '2020-09-26 12:00', end: '2020-09-26 13:00' },
+    { title: '<b>Bloomberg Tech Talk</b>\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 12:00', end: '2020-09-26 13:00', backgroundColor: companyColor },
     // Hopin
     // Company Workshop
-
-    { title: 'Intro to AI Chatbot by Twillio', date: '2020-09-26', start: '2020-09-26 13:00', end: '2020-09-26 14:00' },
+    { title: '<b>Intro to AI Chatbot by Twilio</b>\nAI Track\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 13:00', end: '2020-09-26 14:00', backgroundColor: workshopColor },
     // Hopin
     // Artificial Intelligence Track
-    { title: 'Bloomberg Tech Talk', date: '2020-09-26', start: '2020-09-26 13:30', end: '2020-09-26 17:00' },
+    { title: '<b>Bloomberg Tech Talk</b>\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 13:30', end: '2020-09-26 17:00', backgroundColor: companyColor },
     // Hopin
     // Company Workshop
-
-    { title: 'Salesforce Research Product Demo', date: '2020-09-26', start: '2020-09-26 14:00', end: '2020-09-26 15:00' },
+    { title: '<b>Salesforce Research Product Demo</b>\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 14:00', end: '2020-09-26 15:00', backgroundColor: companyColor },
     // Hopin
     // Company Workshop
-
-    { title: 'Ace Your Coding Interview! Thats the Tweet by Twitter', date: '2020-09-26', start: '2020-09-26 15:00', end: '2020-09-26 16:00' },
+    { title: '<b>Ace Your Coding Interview! That\'s the Tweet by Twitter</b>\n<em>Hopin</em>', date: '2020-09-26', start: '2020-09-26 15:00', end: '2020-09-26 16:00', backgroundColor: companyColor },
     // Hopin
     // Company Workshop
-
-    { title: 'Virtual Escape Room', date: '2020-09-26', start: '2020-09-26 16:00', end: '2020-09-26 17:00' },
+    { title: '<b>Virtual Escape Room</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 16:00', end: '2020-09-26 17:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Scribbl.io', date: '2020-09-26', start: '2020-09-26 19:00', end: '2020-09-26 20:00' },
+    { title: '<b>Scribbl.io</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 19:00', end: '2020-09-26 20:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Women Storm Hackathons', date: '2020-09-26', start: '2020-09-26 20:00', end: '2020-09-26 21:00' },
+    { title: '<b>Women Storm Hackathons</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 20:00', end: '2020-09-26 21:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Slideshow Karaoke', date: '2020-09-26', start: '2020-09-26 21:00', end: '2020-09-26 22:00' },
+    { title: '<b>Slideshow Karaoke</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 21:00', end: '2020-09-26 22:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Among Us', date: '2020-09-26', start: '2020-09-26 24:00', end: '2020-09-27 01:00' },
+    { title: '<b>Among Us</b>\n<em>Zoom</em>', date: '2020-09-26', start: '2020-09-26 24:00', end: '2020-09-27 01:00', backgroundColor: activityColor },
     // Zoom
     // Activity
-
-    { title: 'Hacking Ends', date: '2020-09-27', start: '2020-09-27 10:00'},
+    { title: '<b>Hacking Ends</b>', date: '2020-09-27', start: '2020-09-27 10:00', backgroundColor: generalColor},
     // General
-
-    { title: 'Project Submissions', date: '2020-09-27', start: '2020-09-27 10:00', end: '2020-09-27 12:00' },
+    { title: '<b>Project Submissions</b>\n<em>Devpost</em>', date: '2020-09-27', start: '2020-09-27 10:00', end: '2020-09-27 12:00', backgroundColor: generalColor },
     // General
     // Devpost
-
-    { title: 'Jackbox', date: '2020-09-27', start: '2020-09-27 12:00', end: '2020-09-27 13:30' },
+    { title: '<b>Jackbox</b>\n<em>Zoom</em>', date: '2020-09-27', start: '2020-09-27 12:00', end: '2020-09-27 13:30', backgroundColor: activityColor },
     // Zoom
     // Activity
-    { title: 'Project Judging', date: '2020-09-27', start: '2020-09-27 12:00', end: '2020-09-25 14:00' },
+    { title: '<b>Project Judging</b>', date: '2020-09-27', start: '2020-09-27 12:00', end: '2020-09-25 14:00', backgroundColor: generalColor },
     // General
-    
-
-    { title: 'Closing Ceremony', date: '2020-09-27', start: '2020-09-27 14:00'},
+    { title: '<b>Closing Ceremony</b>\n<em>Hopin</em>', date: '2020-09-27', start: '2020-09-27 14:00', backgroundColor: generalColor},
     // Hopin
     // General
-
-    
-
-
   ]
   return (
     <div className="SchedulePage">
@@ -191,17 +169,30 @@ const SchedulePage = () => {
         <div className="SchedulePage__fullCalendar">
         <FullCalendar
             plugins={[timeGridPlugin]}
-            initialView="timeGrid"
+            initialView="timeGridTwoDay"
+            views={{
+              timeGridTwoDay: {
+                type: 'timeGrid',            
+                validRange: {
+                  start: '2020-09-25',
+                  end: '2020-09-28'
+                },
+                duration: {days: 3}
+              }
+            }}
             dragScroll={true}
             allDaySlot={false}
             nowIndicator={true}
+            slotDuration={'00:15:00'}
             height="80vh"
+            slotEventOverlap={false}
             //eventColor='#8964F0' //<-- Use this to change the color of all events
-            visibleRange={{
-              start: '2020-09-25',
-              end: '2020-09-28'
-            }}
             events={eventList}
+            eventContent= {function(arg) {
+              return {
+                html: arg.event.title.replace(/\n/g, '<br>').replace(/<b>/g, '<b>').replace(/<\\\/b>/g, '</b>').replace(/<em>/g, '<em>').replace(/<\\\/em>/g, '<\em>')
+              }
+            }}
           />
         </div>
       </div>
