@@ -46,7 +46,7 @@ class DashboardContainer extends Component {
               }
               {
               (this.props.application?.status == "CONFIRMED!") 
-                ? <a href="http://go.fiu.edu/shellhacksschedule" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('guide')}>
+                ? <a href="http://go.fiu.edu/shellhacksschedule" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('schedule')}>
                 Schedule</li></a>
                 : ''
               }
