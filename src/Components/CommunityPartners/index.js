@@ -3,10 +3,12 @@ import './styles.sass'
 import SHPE from '../../assets/Sponsors/Logo__SHPE.svg'
 import eMerge from '../../assets/Sponsors/Logo__eMerge.svg'
 import Rocket from '../../assets/Sponsors/Rocket.svg'
+import DSC from '../../assets/Sponsors/Logo__DSC.svg'
 
 
 const sponsors = [
   eMerge,
+  DSC,
   SHPE,
 ]
 

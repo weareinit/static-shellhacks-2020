@@ -42,6 +42,8 @@ import Adobe from '../../assets/Sponsors/Logo__Adobe.svg'
 import EA from '../../assets/Sponsors/Logo__EA.svg'
 import Nike from '../../assets/Sponsors/Logo__Nike.svg'
 import EchoAR from '../../assets/Sponsors/Logo__EchoAR.svg'
+import Addigy from '../../assets/Sponsors/Logo__Addigy.svg'
+import Mitre from '../../assets/Sponsors/Logo__Mitre.svg'
 
 const sponsors = [
   Microsoft,
@@ -61,15 +63,17 @@ const sponsors = [
   Facebook,
   CapitalOne,
   Nike,
+  Pinterest,
+  Balsamiq,
+  Linode,
+  Addigy,
   Lyft,
   Deloitte,
   RoyalCarribean,
   Chevron,
   EA,
+  Mitre,
   OOP,
-  Pinterest,
-  Balsamiq,
-  Linode,
   FifteenSeventeen,
   Ripplematch,
   GCP,
