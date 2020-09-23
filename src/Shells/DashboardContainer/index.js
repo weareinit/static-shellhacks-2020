@@ -35,9 +35,6 @@ class DashboardContainer extends Component {
               <a href="/dashboard">
                 <li className={this.menuItemClasses('dashboard')}>Dashboard</li>
               </a>
-              <a href="/schedule">
-                <li className={this.menuItemClasses('schedule')}>Schedule</li>
-              </a>
               <a href="/application">
                 <li className={this.menuItemClasses('application')}>Application</li>
               </a>
@@ -45,6 +42,12 @@ class DashboardContainer extends Component {
               (this.props.application?.status == "CONFIRMED!") 
                 ? <a href="http://go.fiu.edu/shellhacksguide" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('guide')}>
                 Guide</li></a>
+                : ''
+              }
+              {
+              (this.props.application?.status == "CONFIRMED!") 
+                ? <a href="http://go.fiu.edu/shellhacksschedule" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('guide')}>
+                Schedule</li></a>
                 : ''
               }
               <a href="/">

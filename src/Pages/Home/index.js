@@ -13,6 +13,7 @@ import { AuthStoreConsumer } from '../../store/AuthStore/Context'
 import LoadingPage from '../Loading'
 import DashboardContainer from '../../Shells/DashboardContainer'
 import './styles.sass'
+import SchedulePage from '../SchedulePage'
 
 const HomePage = ({ store }) => {
   return (
