@@ -49,6 +49,14 @@ const DashBoard = ({ store }) => {
 
                 <br/>
                 <div className="DashboardPage__schedule-header">
+              <div align ="left"><h4> 🐚&nbsp;&nbsp;Shellhacks Weekend is Here!!</h4>
+                <br/>
+                  <p>All Announcements will be made on Discord</p></div>
+                    <div align ="right">September 25, 2020</div>
+              </div> 
+
+                <br/>
+                <div className="DashboardPage__schedule-header">
               <div align ="left"><h4> 🎉&nbsp;&nbsp;Congratulations to our $100 Amazon Gift Card winner!</h4>
                 <br/>
                   <p>Taylor Rivera wins a $100 Amazon gift card! We'll be reaching out to you with the details 💰</p></div>
