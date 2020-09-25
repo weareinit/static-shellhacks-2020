@@ -50,6 +50,12 @@ class DashboardContainer extends Component {
                 Schedule</li></a>
                 : ''
               }
+              {
+              (this.props.application?.status == "CONFIRMED!") 
+                ? <a href="https://go.fiu.edu/shellhacksjobboard" target="_blank" rel="noopener noreferrer"><li className={this.menuItemClasses('jobboard')}>
+                Job Board</li></a>
+                : ''
+              }
               <a href="/">
                 <li className={this.menuItemClasses('logout')} onClick={this.logout}>
                   Logout
