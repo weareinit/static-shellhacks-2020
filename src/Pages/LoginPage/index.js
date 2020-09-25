@@ -8,9 +8,6 @@ import { AuthStoreConsumer } from '../../store/AuthStore/Context'
 import './styles.sass'
 
 const LoginPage = ({ store }) => {
-  const handleCreateAccount = () => {
-    history.push('/signUp')
-  }
   const handleForgotPassword = () => {
     history.push('/resetPassword')
   }
@@ -42,7 +39,6 @@ const LoginPage = ({ store }) => {
         </div>
         <LoginForm
           {...{
-            handleCreateAccount,
             handleForgotPassword,
             handleSubmit,
             handleReturn,

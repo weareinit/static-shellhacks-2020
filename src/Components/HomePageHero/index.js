@@ -35,8 +35,8 @@ const HomePageHero = props => {
                   Dashboard
                 </a>
               ) : (
-                <a href="/signUp" role="button" className="pre-register-btn">
-                  Register Now!
+                <a role="button" className="pre-register-btn">
+                  Registrations Closed
                 </a>
               )}
               <div className="button-container">
