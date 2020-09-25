@@ -13,12 +13,6 @@ import './styles.sass'
 
 const ApplicationPage = ({ store }) => {
   const [error, setError] = useState('')
-  const handleSubmit = async data => {
-    setError('')
-    const message = await store.create(data)
-    if (message.success) history.push('/dashboard')
-    setError(message.error)
-  }
   const handleConfirm = async data => {
     setError('')
     const message = await store.confirm(store.application._id)
@@ -108,23 +102,13 @@ const ApplicationPage = ({ store }) => {
   return (
     <div className="ApplicationPage">
       <div className="ApplicationPage__form-container">
-      <div className="ApplicationPage__funnel">
-            <img src={Funnel} alt ="Funnel SVG"/>
-        </div>
         <br/><br/>
         <div className="ApplicationPage__header">
-          <p className="ApplicationPage__title">Application</p>
+          <p className="ApplicationPage__title">Applications have closed</p>
           <p className="ApplicationPage__sub-title">
-            Please fill out the application below (* are mandatory fields)
+            Applications for ShellHacks 2020 have closed. Thank you for your interest, and we hope to see you next year!
           </p>
         </div>
-        <ApplicationForm
-          {...{
-            handleSubmit,
-            loading: store.loading,
-            error: error
-          }}
-        />
       </div>
       <div className="ApplicationPage__footer"></div>
     </div>
