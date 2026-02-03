@@ -34,6 +34,7 @@ jobs:
         run: npm run build
         env:
           SKIP_PREFLIGHT_CHECK: true
+          CI: false
 
       - name: Add .nojekyll file
         run: touch ./build/.nojekyll
