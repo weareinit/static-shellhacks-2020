@@ -2,7 +2,7 @@
   "name": "shellhacks",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://weareinit.github.io/static-shellhacks-2020",
+  "homepage": "/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
